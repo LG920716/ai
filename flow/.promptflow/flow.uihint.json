@@ -1,0 +1,35 @@
+{
+  "nodes": {
+    "Summary": {
+      "variant_0": {
+        "inputs": {
+          "chat_history": [],
+          "question": []
+        }
+      }
+    },
+    "seach_from_ai_search": {
+      "variant_0": {
+        "inputs": {
+          "input1": []
+        }
+      }
+    },
+    "chat": {
+      "variant_0": {
+        "inputs": {
+          "item": [],
+          "chat_history": []
+        }
+      }
+    },
+    "Embedding_inputs": {
+      "variant_0": {
+        "inputs": {
+          "model": [],
+          "input": []
+        }
+      }
+    }
+  }
+}

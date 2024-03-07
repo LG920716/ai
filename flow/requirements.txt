@@ -1,0 +1,6 @@
+azure-identity
+azure-search-documents==11.4.0b6
+openai
+promptflow
+promptflow-tools
+tenacity==8.2.2

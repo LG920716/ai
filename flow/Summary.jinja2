@@ -1,0 +1,16 @@
+system:
+
+根據使用者輸入的問題以及聊天記錄, 產生一個Azure AI Search查詢語句
+如果問題不是中文，請在產生搜尋查詢之前將問題翻譯成中文。
+只輸出查詢語句就好，不要有額外的字詞
+並且去除掉所有符號，只留下中文、英文、數字
+
+{% for item in chat_history %}
+user:
+{{item.inputs.question}}
+assistant:
+{{item.outputs.answer}}
+{% endfor %}
+
+user:
+{{question}}

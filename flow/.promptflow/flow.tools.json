@@ -53,6 +53,18 @@
         }
       },
       "source": "chat.jinja2"
+    },
+    "convert_to_dict.py": {
+      "type": "python",
+      "inputs": {
+        "input_str": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "convert_to_dict.py",
+      "function": "convert_to_dict"
     }
   },
   "package": {

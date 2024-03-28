@@ -7,7 +7,7 @@ import json
 
 #Azure AI Search setting
 AZURE_SEARCH_SERVICE = "fju-basic"
-AZURE_SEARCH_INDEX = "azureblob-index"
+AZURE_SEARCH_INDEX = "qampus-index"
 AZURE_SEARCH_KEY = "WIqsQwWj6JuykjPSxnEWUgZPBZl8Q9KkRQGjmqwxcbAzSeCOICL9"
 
 search_client = SearchClient(

@@ -33,7 +33,7 @@ def my_python_tool(input: str, input_embedding: str) -> str:
         #print(json_doc)
         json_data = {
             "content": json_doc["content"],
-            "sourcepage": json_doc["sourcepage"],
+            "metadata_storage_name": json_doc["metadata_storage_name"],
             "sourcefile": json_doc["sourcefile"]
         }
         results.append(json.dumps(json_data, ensure_ascii=False))

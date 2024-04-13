@@ -42,6 +42,12 @@ nodes:
     input: ${Summary.output}
     input_embedding: ${Embedding_inputs.output}
   aggregation: false
+- name: prepare_examples
+  type: python
+  source:
+    type: code
+    path: prepare_examples.py
+  inputs: {}
 - name: chat
   type: llm
   source:
@@ -50,6 +56,7 @@ nodes:
   inputs:
     max_tokens: 4096
     temperature: 1
+    examples: ${prepare_examples.output}
     chat_history: ${inputs.chat_history}
     question: ${inputs.question}
     model: gpt-4-1106-preview

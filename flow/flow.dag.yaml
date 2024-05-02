@@ -72,4 +72,3 @@ nodes:
   inputs:
     connection: azureopenai
     input: ${Summary.output}
-    deployment_name: embedding

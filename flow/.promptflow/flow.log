@@ -1,14 +1,14 @@
-2024-04-11 16:41:18 +0800   13244 execution.flow     INFO     Start executing nodes in thread pool mode.
-2024-04-11 16:41:18 +0800   13244 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
-2024-04-11 16:41:18 +0800   13244 execution.flow     INFO     Executing node Summary. node run id: ec8a5939-26ef-4eec-b36a-d9a4220c4885_Summary_0
-2024-04-11 16:41:18 +0800   13244 execution.flow     INFO     Executing node prepare_examples. node run id: ec8a5939-26ef-4eec-b36a-d9a4220c4885_prepare_examples_0
-2024-04-11 16:41:18 +0800   13244 execution.flow     INFO     Node prepare_examples completes.
-2024-04-11 16:41:19 +0800   13244 execution.flow     INFO     Node Summary completes.
-2024-04-11 16:41:19 +0800   13244 execution.flow     INFO     Executing node Embedding_inputs. node run id: ec8a5939-26ef-4eec-b36a-d9a4220c4885_Embedding_inputs_0
-2024-04-11 16:41:20 +0800   13244 execution.flow     INFO     Node Embedding_inputs completes.
-2024-04-11 16:41:20 +0800   13244 execution.flow     INFO     Executing node seach_from_ai_search. node run id: ec8a5939-26ef-4eec-b36a-d9a4220c4885_seach_from_ai_search_0
-2024-04-11 16:41:21 +0800   13244 execution.flow     INFO     Node seach_from_ai_search completes.
-2024-04-11 16:41:21 +0800   13244 execution.flow     INFO     Executing node chat. node run id: ec8a5939-26ef-4eec-b36a-d9a4220c4885_chat_0
-2024-04-11 16:41:22 +0800   13244 execution.flow     WARNING  Failed to calculate metrics due to exception: Calculating metrics for model chat16k is not supported..
-2024-04-11 16:41:22 +0800   13244 execution.flow     WARNING  Output of chat is not json serializable, use str to store it.
-2024-04-11 16:41:22 +0800   13244 execution.flow     INFO     Node chat completes.
+2024-04-30 13:50:08 +0800   20068 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-04-30 13:50:08 +0800   20068 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
+2024-04-30 13:50:08 +0800   20068 execution.flow     INFO     Executing node Summary. node run id: 9dab512d-4522-433f-9870-e81086997b07_Summary_0
+2024-04-30 13:50:09 +0800   20068 execution.flow     INFO     Executing node prepare_examples. node run id: 9dab512d-4522-433f-9870-e81086997b07_prepare_examples_0
+2024-04-30 13:50:09 +0800   20068 execution.flow     INFO     Node prepare_examples completes.
+2024-04-30 13:50:14 +0800   20068 execution.flow     INFO     Node Summary completes.
+2024-04-30 13:50:14 +0800   20068 execution.flow     INFO     Executing node Embedding_inputs. node run id: 9dab512d-4522-433f-9870-e81086997b07_Embedding_inputs_0
+2024-04-30 13:50:18 +0800   20068 execution.flow     INFO     Node Embedding_inputs completes.
+2024-04-30 13:50:18 +0800   20068 execution.flow     INFO     Executing node seach_from_ai_search. node run id: 9dab512d-4522-433f-9870-e81086997b07_seach_from_ai_search_0
+2024-04-30 13:50:23 +0800   20068 execution.flow     INFO     Node seach_from_ai_search completes.
+2024-04-30 13:50:23 +0800   20068 execution.flow     INFO     Executing node chat. node run id: 9dab512d-4522-433f-9870-e81086997b07_chat_0
+2024-04-30 13:50:24 +0800   20068 execution.flow     WARNING  Failed to calculate metrics due to exception: Calculating metrics for model chat16k is not supported..
+2024-04-30 13:50:24 +0800   20068 execution.flow     WARNING  Output of chat is not json serializable, use str to store it.
+2024-04-30 13:50:24 +0800   20068 execution.flow     INFO     Node chat completes.

@@ -132,7 +132,7 @@
         }
       },
       "package": "promptflow-tools",
-      "package_version": "1.0.3"
+      "package_version": "1.4.0"
     }
   }
 }

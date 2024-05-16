@@ -36,6 +36,11 @@
     "chat.jinja2": {
       "type": "llm",
       "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
         "item": {
           "type": [
             "string"
@@ -47,11 +52,6 @@
           ]
         },
         "chat_history": {
-          "type": [
-            "string"
-          ]
-        },
-        "question": {
           "type": [
             "string"
           ]
@@ -132,7 +132,7 @@
         }
       },
       "package": "promptflow-tools",
-      "package_version": "1.0.3"
+      "package_version": "1.4.0"
     }
   }
 }

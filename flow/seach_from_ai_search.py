@@ -1,4 +1,4 @@
-from promptflow import tool
+from promptflow.core import tool
 from openai import OpenAI
 from azure.search.documents import SearchClient
 from azure.search.documents.models import QueryType
@@ -22,7 +22,7 @@ def my_python_tool(input: str, input_embedding: str) -> str:
                         query_type=QueryType.SEMANTIC, 
                         query_language="zh-tw",
                         semantic_configuration_name="default", 
-                        top=3,
+                        top=1,
                         query_caption="extractive",
                         query_answer="extractive",
                         vector=input_embedding, 

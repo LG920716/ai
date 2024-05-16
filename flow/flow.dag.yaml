@@ -12,6 +12,12 @@ inputs:
     type: list
     default: []
     is_chat_history: true
+  tokens_per_message:
+    type: int
+    default: 2
+  tokens_per_name:
+    type: int
+    default: 1
 outputs:
   answer:
     type: string
@@ -27,10 +33,10 @@ nodes:
     model: gpt-3.5-turbo-1106
     stop: []
     temperature: 1
-    max_tokens: 4096
     chat_history: ${inputs.chat_history}
     question: ${inputs.question}
     deployment_name: chat16k
+    max_tokens: 4096
   connection: azureopenai
   api: chat
 - name: seach_from_ai_search
@@ -54,7 +60,6 @@ nodes:
     type: code
     path: chat.jinja2
   inputs:
-    max_tokens: 4096
     temperature: 1
     examples: ${prepare_examples.output}
     chat_history: ${inputs.chat_history}
@@ -62,6 +67,7 @@ nodes:
     model: gpt-4-1106-preview
     item: ${seach_from_ai_search.output}
     deployment_name: chat16k
+    max_tokens: 4096
   connection: azureopenai
   api: chat
 - name: Embedding_inputs
@@ -72,3 +78,4 @@ nodes:
   inputs:
     connection: azureopenai
     input: ${Summary.output}
+    deployment_name: embedding

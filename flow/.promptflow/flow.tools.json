@@ -3,11 +3,6 @@
     "Summary.jinja2": {
       "type": "llm",
       "inputs": {
-        "chat_history": {
-          "type": [
-            "string"
-          ]
-        },
         "question": {
           "type": [
             "string"
@@ -46,12 +41,7 @@
             "string"
           ]
         },
-        "chat_history": {
-          "type": [
-            "string"
-          ]
-        },
-        "question": {
+        "summary": {
           "type": [
             "string"
           ]
@@ -75,6 +65,22 @@
       "type": "python",
       "source": "prepare_examples.py",
       "function": "prepare_examples"
+    },
+    "chat_history_summary.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "chat_history": {
+          "type": [
+            "string"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "chat_history_summary.jinja2"
     }
   },
   "package": {

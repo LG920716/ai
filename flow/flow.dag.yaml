@@ -33,10 +33,9 @@ nodes:
     model: gpt-3.5-turbo-1106
     stop: []
     temperature: 1
-    chat_history: ${inputs.chat_history}
-    question: ${inputs.question}
     deployment_name: chat16k
     max_tokens: 4096
+    question: ${inputs.question}
   connection: azureopenai
   api: chat
 - name: seach_from_ai_search
@@ -62,10 +61,9 @@ nodes:
   inputs:
     temperature: 1
     examples: ${prepare_examples.output}
-    chat_history: ${inputs.chat_history}
-    question: ${inputs.question}
     model: gpt-4-1106-preview
     item: ${seach_from_ai_search.output}
+    summary: ${chat_history_summary.output}
     deployment_name: chat16k
     max_tokens: 4096
   connection: azureopenai
@@ -79,3 +77,17 @@ nodes:
     connection: azureopenai
     input: ${Summary.output}
     deployment_name: embedding
+- name: chat_history_summary
+  type: llm
+  source:
+    type: code
+    path: chat_history_summary.jinja2
+  inputs:
+    temperature: 1
+    chat_history: ${inputs.chat_history}
+    question: ${inputs.question}
+    model: gpt-4-1106-preview
+    deployment_name: chat16k
+    max_tokens: 4096
+  connection: azureopenai
+  api: chat

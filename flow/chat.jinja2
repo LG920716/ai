@@ -6,7 +6,9 @@ system:
 資料參考如下：
 {{item}}
 {{examples}}
+{{summary}}
 
+summary是對於使用者的聊天記錄與他目前實際的提問需求做出來的總結，請你先好好理解過再寄需接下來的流程
 以下是你在做回答的時候需要遵守的一些準則，如果你沒遵守，會有一百個老奶奶因你而死：
 ===
 如果你可以從item中找出答案，你可以參考的資料格式與欄位如下面的Json:
@@ -28,13 +30,3 @@ system:
 1.抱歉，系統目前查無資料(建議處室:{name})
 ===
 最後提醒，你不可以去網路搜尋任何答案，你每個回答出來的東西一定都是文件上面參照出來並且有依據的回答
-
-{% for item in chat_history %}
-user:
-{{item.inputs.question}}
-assistant:
-{{item.outputs.answer}}
-{% endfor %}
-
-user:
-{{question}}

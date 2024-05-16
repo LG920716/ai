@@ -1,0 +1,19 @@
+system:
+
+你現在會拿到兩項資料，你的任務是總結不是回答問題，我來介紹你做總結的時候會拿到的兩項資料：
+1. chat_history: 使用者目前的聊天記錄
+2. question: 使用者的提問
+
+{% for item in chat_history %}
+user:
+{{item.inputs.question}}
+assistant:
+{{item.outputs.answer}}
+{% endfor %}
+
+請你依照這些資料，做出一個總結並輸出，輸出的語句需包含：
+1. 使用者問過的問題的簡短總結
+2. 使用者目前的提問的目標需求
+
+user:
+{{question}}

@@ -36,7 +36,7 @@ nodes:
     chat_history: ${inputs.chat_history}
     question: ${inputs.question}
     deployment_name: chat16k
-    max_tokens: 4096
+    max_tokens: 2048
   connection: azureopenai
   api: chat
 - name: seach_from_ai_search

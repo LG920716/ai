@@ -34,6 +34,11 @@
       "x": 140,
       "y": 444,
       "index": 2
+    },
+    "chat_history_summary": {
+      "x": 810,
+      "y": 444,
+      "index": -1
     }
   },
   "orientation": "Vertical"

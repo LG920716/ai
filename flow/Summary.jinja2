@@ -5,12 +5,5 @@ system:
 只輸出查詢語句就好，不要有額外的字詞
 並且去除掉所有符號，只留下中文、英文、數字
 
-{% for item in chat_history %}
-user:
-{{item.inputs.question}}
-assistant:
-{{item.outputs.answer}}
-{% endfor %}
-
 user:
 {{question}}

@@ -7,13 +7,14 @@ inputs:
     type: string
     is_chat_input: true
     default: hello
-    is_chat_history: false
   tokens_per_message:
     type: int
     default: 2
   tokens_per_name:
     type: int
     default: 1
+  session_id:
+    type: string
 outputs:
   answer:
     type: string
@@ -56,6 +57,7 @@ nodes:
     path: chat.jinja2
   inputs:
     temperature: 1
+    context: ${context.optput}
     examples: ${prepare_examples.output}
     question: ${inputs.question}
     model: gpt-4-1106-preview
@@ -73,3 +75,10 @@ nodes:
     connection: azureopenai
     input: ${Summary.output}
     deployment_name: embedding
+- name: context
+  type: python
+  source:
+    type: code
+    path: context.py
+  inputs:
+    session_id: ${inputs.session_id}

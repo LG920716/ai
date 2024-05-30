@@ -4,3 +4,4 @@ openai
 promptflow
 promptflow-tools
 tenacity==8.2.2
+requests

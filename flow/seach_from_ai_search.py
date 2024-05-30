@@ -22,7 +22,7 @@ def my_python_tool(input: str, input_embedding: str) -> str:
                         query_type=QueryType.SEMANTIC, 
                         query_language="zh-tw",
                         semantic_configuration_name="default", 
-                        top=1,
+                        top=3,
                         query_caption="extractive",
                         query_answer="extractive",
                         vector=input_embedding, 

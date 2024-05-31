@@ -15,6 +15,7 @@ inputs:
     default: 1
   session_id:
     type: string
+    default: "1"
 outputs:
   answer:
     type: string
@@ -44,12 +45,6 @@ nodes:
     input: ${Summary.output}
     input_embedding: ${Embedding_inputs.output}
   aggregation: false
-- name: prepare_examples
-  type: python
-  source:
-    type: code
-    path: prepare_examples.py
-  inputs: {}
 - name: chat
   type: llm
   source:
@@ -57,8 +52,7 @@ nodes:
     path: chat.jinja2
   inputs:
     temperature: 1
-    context: ${context.optput}
-    examples: ${prepare_examples.output}
+    context: ${context.output}
     question: ${inputs.question}
     model: gpt-4-1106-preview
     item: ${seach_from_ai_search.output}

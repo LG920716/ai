@@ -1,22 +1,23 @@
 import requests
 from promptflow.core import tool
+import json
 
 @tool
 def call_api(session_id):
-    url = "http://140.136.202.125/api/context"
+    url = "https://localhost:7146/api/Context"
 
     params = {
         'sessionId': session_id
     }
+    
+    response = requests.get(url, params=params, verify=False)  # verify=False 是為了跳過 SSL 驗證，僅在開發時使用
 
-    try:
-        response = requests.get(url, params=params)
-
-        if response.status_code == 200:
-            return response.json()
-        else:
-            print(f"Request failed with status code {response.status_code}")
-            return None
-    except requests.exceptions.RequestException as e:
-        print(f"An error occurred: {e}")
-        return None
+    response_json = response.json()
+    results = []
+    for item in response_json:
+        json_data = {
+            "sessionId": item.get("sessionId"),
+            "questionQuestion": item.get("questionQuestion")
+        }
+        results.append(json.dumps(json_data, ensure_ascii=False))
+    return "\n".join(results)

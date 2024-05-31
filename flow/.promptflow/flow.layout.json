@@ -1,44 +1,44 @@
 {
   "nodeLayouts": {
     "inputs": {
-      "x": 795,
+      "x": 465,
       "y": 42,
       "index": -1
     },
     "outputs": {
-      "x": 637.5,
+      "x": 395,
       "y": 712,
       "index": -1
     },
     "chat": {
-      "x": 557.5,
+      "x": 315,
       "y": 578,
-      "index": 3
+      "index": 2
     },
     "Summary": {
-      "x": 830,
+      "x": 500,
       "y": 176,
       "index": 0
     },
     "seach_from_ai_search": {
-      "x": 830,
+      "x": 500,
       "y": 444,
       "index": 1
     },
     "Embedding_inputs": {
-      "x": 917.5,
+      "x": 587.5,
       "y": 310,
-      "index": 4
+      "index": 3
     },
     "prepare_examples": {
       "x": 470,
       "y": 444,
-      "index": 2
+      "index": -1
     },
     "context": {
       "x": 140,
       "y": 444,
-      "index": 5
+      "index": 4
     }
   },
   "orientation": "Vertical"

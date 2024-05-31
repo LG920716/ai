@@ -16,7 +16,6 @@ def call_api(session_id):
     results = []
     for item in response_json:
         json_data = {
-            "sessionId": item.get("sessionId"),
             "questionQuestion": item.get("questionQuestion")
         }
         results.append(json.dumps(json_data, ensure_ascii=False))

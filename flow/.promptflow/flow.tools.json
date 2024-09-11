@@ -41,11 +41,6 @@
             "string"
           ]
         },
-        "examples": {
-          "type": [
-            "string"
-          ]
-        },
         "question": {
           "type": [
             "string"

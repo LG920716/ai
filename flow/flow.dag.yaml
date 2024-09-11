@@ -7,15 +7,23 @@ inputs:
     type: string
     is_chat_input: true
     default: hello
+    is_chat_history: false
   tokens_per_message:
     type: int
     default: 2
+    is_chat_history: false
   tokens_per_name:
     type: int
     default: 1
+    is_chat_history: false
   session_id:
     type: string
     default: "1"
+    is_chat_history: false
+  chat_history:
+    type: list
+    default: []
+    is_chat_history: true
 outputs:
   answer:
     type: string
@@ -34,7 +42,7 @@ nodes:
     question: ${inputs.question}
     deployment_name: chat16k
     max_tokens: 2048
-  connection: azureopenai
+  connection: azureaoai
   api: chat
 - name: seach_from_ai_search
   type: python
@@ -51,14 +59,14 @@ nodes:
     type: code
     path: chat.jinja2
   inputs:
-    temperature: 1
+    temperature: 0.8
     context: ${context.output}
     question: ${inputs.question}
     model: gpt-4-1106-preview
     item: ${seach_from_ai_search.output}
     deployment_name: chat16k
     max_tokens: 4096
-  connection: azureopenai
+  connection: azureaoai
   api: chat
 - name: Embedding_inputs
   type: python
@@ -66,7 +74,7 @@ nodes:
     type: package
     tool: promptflow.tools.embedding.embedding
   inputs:
-    connection: azureopenai
+    connection: azureaoai
     input: ${Summary.output}
     deployment_name: embedding
 - name: context

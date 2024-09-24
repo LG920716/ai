@@ -1,0 +1,98 @@
+id: template_chat_flow
+name: Template Chat Flow
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  question:
+    type: string
+    is_chat_input: true
+    default: hello
+    is_chat_history: false
+  tokens_per_message:
+    type: int
+    default: 2
+    is_chat_history: false
+  tokens_per_name:
+    type: int
+    default: 1
+    is_chat_history: false
+  session_id:
+    type: string
+    default: kvAMVV4fdGtqFtBfrrTdjSR5WX9lfqqj
+    is_chat_history: false
+  chat_history:
+    type: list
+    default: []
+    is_chat_history: true
+outputs:
+  answer:
+    type: string
+    reference: ${chat.output}
+    is_chat_output: true
+nodes:
+- name: Summary
+  type: llm
+  source:
+    type: code
+    path: Summary.jinja2
+  inputs:
+    model: gpt-3.5-turbo-1106
+    stop: []
+    temperature: 1
+    question: ${inputs.question}
+    deployment_name: chat16k
+    max_tokens: 2048
+  connection: azureaoai
+  api: chat
+- name: seach_from_ai_search
+  type: python
+  source:
+    type: code
+    path: seach_from_ai_search.py
+  inputs:
+    input: ${Summary.output}
+    input_embedding: ${Embedding_inputs.output}
+  aggregation: false
+- name: chat
+  type: llm
+  source:
+    type: code
+    path: chat.jinja2
+  inputs:
+    temperature: 0.8
+    context: ${organize_context.output}
+    question: ${inputs.question}
+    model: gpt-35-turbo-0613
+    item: ${seach_from_ai_search.output}
+    deployment_name: chat16k
+    max_tokens: 4096
+  connection: azureaoai
+  api: chat
+- name: Embedding_inputs
+  type: python
+  source:
+    type: package
+    tool: promptflow.tools.embedding.embedding
+  inputs:
+    connection: azureaoai
+    input: ${Summary.output}
+    deployment_name: embedding
+- name: context
+  type: python
+  source:
+    type: code
+    path: context.py
+  inputs:
+    session_id: ${inputs.session_id}
+- name: organize_context
+  type: llm
+  source:
+    type: code
+    path: organize_context.jinja2
+  inputs:
+    deployment_name: chat16k
+    temperature: 0.8
+    max_tokens: 4096
+    context: ${context.output}
+  connection: azureaoai
+  api: chat

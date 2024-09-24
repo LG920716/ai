@@ -3,11 +3,6 @@
     "Summary.jinja2": {
       "type": "llm",
       "inputs": {
-        "chat_history": {
-          "type": [
-            "string"
-          ]
-        },
         "question": {
           "type": [
             "string"
@@ -36,17 +31,12 @@
     "chat.jinja2": {
       "type": "llm",
       "inputs": {
+        "context": {
+          "type": [
+            "string"
+          ]
+        },
         "item": {
-          "type": [
-            "string"
-          ]
-        },
-        "examples": {
-          "type": [
-            "string"
-          ]
-        },
-        "chat_history": {
           "type": [
             "string"
           ]
@@ -59,22 +49,28 @@
       },
       "source": "chat.jinja2"
     },
-    "convert_to_dict.py": {
+    "context.py": {
       "type": "python",
       "inputs": {
-        "input_str": {
+        "session_id": {
           "type": [
             "string"
           ]
         }
       },
-      "source": "convert_to_dict.py",
-      "function": "convert_to_dict"
+      "source": "context.py",
+      "function": "call_api"
     },
-    "prepare_examples.py": {
-      "type": "python",
-      "source": "prepare_examples.py",
-      "function": "prepare_examples"
+    "organize_context.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "context": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "organize_context.jinja2"
     }
   },
   "package": {

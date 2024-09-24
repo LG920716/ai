@@ -1,7 +1,7 @@
 {
   "nodeLayouts": {
     "inputs": {
-      "x": 562.5,
+      "x": 465,
       "y": 42,
       "index": -1
     },
@@ -13,7 +13,7 @@
     "chat": {
       "x": 315,
       "y": 578,
-      "index": 3
+      "index": 2
     },
     "Summary": {
       "x": 500,
@@ -28,12 +28,22 @@
     "Embedding_inputs": {
       "x": 587.5,
       "y": 310,
-      "index": 4
+      "index": 3
     },
     "prepare_examples": {
+      "x": 470,
+      "y": 444,
+      "index": -1
+    },
+    "context": {
+      "x": 140,
+      "y": 310,
+      "index": 4
+    },
+    "organize_context": {
       "x": 140,
       "y": 444,
-      "index": 2
+      "index": 5
     }
   },
   "orientation": "Vertical"

@@ -37,6 +37,14 @@
           "input_str": []
         }
       }
+    },
+    "organize_context": {
+      "variant_0": {
+        "inputs": {
+          "chat_history": [],
+          "context": []
+        }
+      }
     }
   }
 }

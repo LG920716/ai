@@ -1,16 +1,12 @@
-2024-09-16 10:26:09 +0800    2771 execution.flow     INFO     Start executing nodes in thread pool mode.
-2024-09-16 10:26:09 +0800    2771 execution.flow     INFO     Start to run 6 nodes with concurrency level 16.
-2024-09-16 10:26:09 +0800    2771 execution.flow     INFO     Executing node Summary. node run id: b91451e3-3b4c-4138-87cc-0bef194a4266_Summary_0
-2024-09-16 10:26:09 +0800    2771 execution.flow     INFO     Executing node context. node run id: b91451e3-3b4c-4138-87cc-0bef194a4266_context_0
-2024-09-16 10:26:09 +0800    2771 execution.flow     INFO     Node context completes.
-2024-09-16 10:26:09 +0800    2771 execution.flow     INFO     Executing node organize_context. node run id: b91451e3-3b4c-4138-87cc-0bef194a4266_organize_context_0
-2024-09-16 10:26:11 +0800    2771 execution.flow     INFO     Node Summary completes.
-2024-09-16 10:26:11 +0800    2771 execution.flow     INFO     Executing node Embedding_inputs. node run id: b91451e3-3b4c-4138-87cc-0bef194a4266_Embedding_inputs_0
-2024-09-16 10:26:12 +0800    2771 execution.flow     INFO     Node organize_context completes.
-2024-09-16 10:26:14 +0800    2771 execution.flow     INFO     Node Embedding_inputs completes.
-2024-09-16 10:26:14 +0800    2771 execution.flow     INFO     Executing node seach_from_ai_search. node run id: b91451e3-3b4c-4138-87cc-0bef194a4266_seach_from_ai_search_0
-2024-09-16 10:26:18 +0800    2771 execution.flow     INFO     Node seach_from_ai_search completes.
-2024-09-16 10:26:18 +0800    2771 execution.flow     INFO     Executing node chat. node run id: b91451e3-3b4c-4138-87cc-0bef194a4266_chat_0
-2024-09-16 10:26:21 +0800    2771 execution.flow     WARNING  Failed to calculate metrics due to exception: Calculating metrics for model chat16k is not supported..
-2024-09-16 10:26:21 +0800    2771 execution.flow     INFO     Node chat completes.
-2024-09-16 10:26:21 +0800    2771 execution.flow     WARNING  Failed to calculate metrics due to exception: Calculating metrics for model chat16k is not supported..
+2024-10-01 15:15:07 +0800   10244 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-10-01 15:15:07 +0800   10244 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
+2024-10-01 15:15:07 +0800   10244 execution.flow     INFO     Executing node context. node run id: 50a42c81-fe34-420f-9537-04b89187e0ee_context_0
+2024-10-01 15:15:07 +0800   10244 execution.flow     INFO     Node context completes.
+2024-10-01 15:15:07 +0800   10244 execution.flow     INFO     Executing node Summary. node run id: 50a42c81-fe34-420f-9537-04b89187e0ee_Summary_0
+2024-10-01 15:15:08 +0800   10244 execution.flow     INFO     Node Summary completes.
+2024-10-01 15:15:08 +0800   10244 execution.flow     INFO     Executing node Embedding_inputs. node run id: 50a42c81-fe34-420f-9537-04b89187e0ee_Embedding_inputs_0
+2024-10-01 15:15:08 +0800   10244 execution.flow     INFO     Node Embedding_inputs completes.
+2024-10-01 15:15:08 +0800   10244 execution.flow     INFO     Executing node seach_from_ai_search. node run id: 50a42c81-fe34-420f-9537-04b89187e0ee_seach_from_ai_search_0
+2024-10-01 15:15:09 +0800   10244 execution.flow     INFO     Node seach_from_ai_search completes.
+2024-10-01 15:15:09 +0800   10244 execution.flow     INFO     Executing node chat. node run id: 50a42c81-fe34-420f-9537-04b89187e0ee_chat_0
+2024-10-01 15:15:10 +0800   10244 execution.flow     INFO     Node chat completes.

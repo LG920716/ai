@@ -19,7 +19,8 @@
       "variant_0": {
         "inputs": {
           "item": [],
-          "chat_history": []
+          "chat_history": [],
+          "context": []
         }
       }
     },

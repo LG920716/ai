@@ -31,7 +31,7 @@
       "index": 3
     },
     "prepare_examples": {
-      "x": 140,
+      "x": 470,
       "y": 444,
       "index": -1
     },
@@ -39,6 +39,11 @@
       "x": 480,
       "y": 176,
       "index": 4
+    },
+    "organize_context": {
+      "x": 140,
+      "y": 444,
+      "index": -1
     }
   },
   "orientation": "Vertical"

@@ -7,11 +7,6 @@
           "type": [
             "string"
           ]
-        },
-        "chat_history": {
-          "type": [
-            "string"
-          ]
         }
       },
       "source": "Summary.jinja2"
@@ -37,11 +32,6 @@
       "type": "llm",
       "inputs": {
         "item": {
-          "type": [
-            "string"
-          ]
-        },
-        "chat_history": {
           "type": [
             "string"
           ]

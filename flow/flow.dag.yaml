@@ -22,58 +22,57 @@ outputs:
     reference: ${chat.output}
     is_chat_output: true
 nodes:
-  - name: Summary
-    type: llm
-    source:
-      type: code
-      path: Summary.jinja2
-    inputs:
-      model: gpt-4v
-      stop: []
-      temperature: 0.2
-      question: ${inputs.question}
-      deployment_name: chat16k
-      max_tokens: 2048
-      chat_history: ${context.output}
+- name: Summary
+  type: llm
+  source:
+    type: code
+    path: Summary.jinja2
+  inputs:
+    model: gpt-4v
+    stop: []
+    temperature: 0.2
+    question: ${inputs.question}
+    context: ${context.output}
+    deployment_name: chat16k
+    max_tokens: 2048
+  connection: azureopenai
+  api: chat
+- name: seach_from_ai_search
+  type: python
+  source:
+    type: code
+    path: seach_from_ai_search.py
+  inputs:
+    input: ${Summary.output}
+    input_embedding: ${Embedding_inputs.output}
+  aggregation: false
+- name: chat
+  type: llm
+  source:
+    type: code
+    path: chat.jinja2
+  inputs:
+    temperature: 0
+    question: ${inputs.question}
+    model: gpt-35-turbo-0613
+    item: ${seach_from_ai_search.output}
+    deployment_name: chat16k
+    max_tokens: 4096
+  connection: azureopenai
+  api: chat
+- name: Embedding_inputs
+  type: python
+  source:
+    type: package
+    tool: promptflow.tools.embedding.embedding
+  inputs:
     connection: azureopenai
-    api: chat
-  - name: seach_from_ai_search
-    type: python
-    source:
-      type: code
-      path: seach_from_ai_search.py
-    inputs:
-      input: ${Summary.output}
-      input_embedding: ${Embedding_inputs.output}
-    aggregation: false
-  - name: chat
-    type: llm
-    source:
-      type: code
-      path: chat.jinja2
-    inputs:
-      temperature: 0
-      question: ${inputs.question}
-      model: gpt-35-turbo-0613
-      item: ${seach_from_ai_search.output}
-      deployment_name: chat16k
-      max_tokens: 4096
-      chat_history: ${context.output}
-    connection: azureopenai
-    api: chat
-  - name: Embedding_inputs
-    type: python
-    source:
-      type: package
-      tool: promptflow.tools.embedding.embedding
-    inputs:
-      connection: azureopenai
-      input: ${Summary.output}
-      deployment_name: embedding
-  - name: context
-    type: python
-    source:
-      type: code
-      path: context.py
-    inputs:
-      session_id: ${inputs.session_id}
+    input: ${Summary.output}
+    deployment_name: embedding
+- name: context
+  type: python
+  source:
+    type: code
+    path: context.py
+  inputs:
+    session_id: ${inputs.session_id}

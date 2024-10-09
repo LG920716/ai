@@ -6,28 +6,28 @@
       "index": -1
     },
     "outputs": {
-      "x": 307.5,
-      "y": 846,
+      "x": 297.5,
+      "y": 712,
       "index": -1
     },
     "chat": {
-      "x": 227.5,
-      "y": 712,
+      "x": 217.5,
+      "y": 578,
       "index": 2
     },
     "Summary": {
-      "x": 227.5,
-      "y": 310,
+      "x": 470,
+      "y": 176,
       "index": 0
     },
     "seach_from_ai_search": {
-      "x": 227.5,
-      "y": 578,
+      "x": 470,
+      "y": 444,
       "index": 1
     },
     "Embedding_inputs": {
-      "x": 315,
-      "y": 444,
+      "x": 557.5,
+      "y": 310,
       "index": 3
     },
     "prepare_examples": {
@@ -36,8 +36,8 @@
       "index": -1
     },
     "context": {
-      "x": 480,
-      "y": 176,
+      "x": 322.2578125,
+      "y": 316.171875,
       "index": 4
     },
     "organize_context": {

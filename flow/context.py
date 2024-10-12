@@ -12,4 +12,5 @@ def call_api(session_id: str) -> str:
     for item in response_json:
         json_data = {"questionQuestion": item.get("questionQuestion")}
         results.append(json.dumps(json_data, ensure_ascii=False))
-    return "\n".join(results)
+    context = "\n".join(results)
+    return context

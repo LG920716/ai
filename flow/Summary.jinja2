@@ -1,11 +1,14 @@
 system:
 
+you can reference the following data:
+{{context}}
+
 Given a chat history and the latest user question \
 you need to reference context in the chat history, formulate a standalone question \
 which can be understood without the chat history. Do NOT answer the question.
 If reformulation is necessary, ensure that the new question is clear and makes sense.
 If no reformulation is needed, return the original question as is. 
-notice the output must be chinese.
+notice the output language must be as same as the user input.
 
 user:
 {{question}}

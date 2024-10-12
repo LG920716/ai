@@ -6,11 +6,11 @@ inputs:
   question:
     type: string
     is_chat_input: true
-    default: swimming pool
+    default: I want to know the detail of target 1
     is_chat_history: false
   session_id:
     type: string
-    default: zmt1Z7d3mq1zQjWEtGnlud1bA7CDUMfF
+    default: sl2n3iw1FQI8esz74kl9uq36DI2iuVbG
     is_chat_history: false
   chat_history:
     type: list
@@ -58,6 +58,7 @@ nodes:
     item: ${seach_from_ai_search.output}
     deployment_name: chat16k
     max_tokens: 4096
+    context: ${context.output}
   connection: azureopenai
   api: chat
 - name: Embedding_inputs

@@ -3,6 +3,11 @@
     "Summary.jinja2": {
       "type": "llm",
       "inputs": {
+        "context": {
+          "type": [
+            "string"
+          ]
+        },
         "question": {
           "type": [
             "string"
@@ -31,6 +36,11 @@
     "chat.jinja2": {
       "type": "llm",
       "inputs": {
+        "context": {
+          "type": [
+            "string"
+          ]
+        },
         "item": {
           "type": [
             "string"

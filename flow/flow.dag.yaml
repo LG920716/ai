@@ -6,11 +6,11 @@ inputs:
   question:
     type: string
     is_chat_input: true
-    default: I want to know the detail of target 1
+    default: '"我前面問過什麼"'
     is_chat_history: false
   session_id:
     type: string
-    default: sl2n3iw1FQI8esz74kl9uq36DI2iuVbG
+    default: '"rO5Tz96ll6nwfeeokXeNMzG4QnmDnRNv"'
     is_chat_history: false
   chat_history:
     type: list
@@ -30,7 +30,7 @@ nodes:
   inputs:
     model: gpt-4v
     stop: []
-    temperature: 0.2
+    temperature: 0.9
     question: ${inputs.question}
     context: ${context.output}
     deployment_name: chat16k
@@ -52,7 +52,7 @@ nodes:
     type: code
     path: chat.jinja2
   inputs:
-    temperature: 0
+    temperature: 0.9
     question: ${inputs.question}
     model: gpt-35-turbo-0613
     item: ${seach_from_ai_search.output}

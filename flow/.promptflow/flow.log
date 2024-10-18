@@ -1,12 +1,12 @@
-2024-10-12 14:37:33 +0800    4083 execution.flow     INFO     Start executing nodes in thread pool mode.
-2024-10-12 14:37:33 +0800    4083 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
-2024-10-12 14:37:33 +0800    4083 execution.flow     INFO     Executing node context. node run id: ad7d00eb-2c49-492b-8f2d-a9c86e1dba73_context_0
-2024-10-12 14:37:33 +0800    4083 execution.flow     INFO     Node context completes.
-2024-10-12 14:37:33 +0800    4083 execution.flow     INFO     Executing node Summary. node run id: ad7d00eb-2c49-492b-8f2d-a9c86e1dba73_Summary_0
-2024-10-12 14:37:34 +0800    4083 execution.flow     INFO     Node Summary completes.
-2024-10-12 14:37:34 +0800    4083 execution.flow     INFO     Executing node Embedding_inputs. node run id: ad7d00eb-2c49-492b-8f2d-a9c86e1dba73_Embedding_inputs_0
-2024-10-12 14:37:35 +0800    4083 execution.flow     INFO     Node Embedding_inputs completes.
-2024-10-12 14:37:35 +0800    4083 execution.flow     INFO     Executing node seach_from_ai_search. node run id: ad7d00eb-2c49-492b-8f2d-a9c86e1dba73_seach_from_ai_search_0
-2024-10-12 14:37:36 +0800    4083 execution.flow     INFO     Node seach_from_ai_search completes.
-2024-10-12 14:37:36 +0800    4083 execution.flow     INFO     Executing node chat. node run id: ad7d00eb-2c49-492b-8f2d-a9c86e1dba73_chat_0
-2024-10-12 14:37:40 +0800    4083 execution.flow     INFO     Node chat completes.
+2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
+2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Executing node context. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_context_0
+2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Node context completes.
+2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Executing node Summary. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_Summary_0
+2024-10-18 15:00:34 +0800   25084 execution.flow     INFO     Node Summary completes.
+2024-10-18 15:00:34 +0800   25084 execution.flow     INFO     Executing node Embedding_inputs. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_Embedding_inputs_0
+2024-10-18 15:00:41 +0800   25084 execution.flow     INFO     Node Embedding_inputs completes.
+2024-10-18 15:00:41 +0800   25084 execution.flow     INFO     Executing node seach_from_ai_search. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_seach_from_ai_search_0
+2024-10-18 15:00:42 +0800   25084 execution.flow     INFO     Node seach_from_ai_search completes.
+2024-10-18 15:00:42 +0800   25084 execution.flow     INFO     Executing node chat. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_chat_0
+2024-10-18 15:00:43 +0800   25084 execution.flow     INFO     Node chat completes.

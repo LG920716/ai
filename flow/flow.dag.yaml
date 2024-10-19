@@ -6,22 +6,31 @@ inputs:
   question:
     type: string
     is_chat_input: true
-    default: '"我前面問過什麼"'
+    default: 我剛剛說了什麼
     is_chat_history: false
-  session_id:
+  sessionId:
     type: string
-    default: '"rO5Tz96ll6nwfeeokXeNMzG4QnmDnRNv"'
     is_chat_history: false
+    is_chat_input: false
+    default: GSlU38XDTPHEmN0DsarcPmoeyzFU5Jol
   chat_history:
     type: list
     default: []
     is_chat_history: true
+    is_chat_input: false
 outputs:
   answer:
     type: string
     reference: ${chat.output}
     is_chat_output: true
 nodes:
+- name: context
+  type: python
+  source:
+    type: code
+    path: context.py
+  inputs:
+    session_id: ${inputs.sessionId}
 - name: Summary
   type: llm
   source:
@@ -52,7 +61,7 @@ nodes:
     type: code
     path: chat.jinja2
   inputs:
-    temperature: 0.9
+    temperature: 0.5
     question: ${inputs.question}
     model: gpt-35-turbo-0613
     item: ${seach_from_ai_search.output}
@@ -70,10 +79,3 @@ nodes:
     connection: azureopenai
     input: ${Summary.output}
     deployment_name: embedding
-- name: context
-  type: python
-  source:
-    type: code
-    path: context.py
-  inputs:
-    session_id: ${inputs.session_id}

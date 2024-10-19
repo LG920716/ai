@@ -13,27 +13,27 @@
     "chat": {
       "x": 227.5,
       "y": 712,
-      "index": 2
+      "index": 3
     },
     "Summary": {
       "x": 227.5,
       "y": 310,
-      "index": 0
+      "index": 1
     },
     "seach_from_ai_search": {
       "x": 227.5,
       "y": 578,
-      "index": 1
+      "index": 2
     },
     "Embedding_inputs": {
       "x": 315,
       "y": 444,
-      "index": 3
+      "index": 4
     },
     "context": {
       "x": 480,
       "y": 176,
-      "index": 4
+      "index": 0
     }
   },
   "orientation": "Vertical"

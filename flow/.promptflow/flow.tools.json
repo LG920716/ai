@@ -41,12 +41,12 @@
             "string"
           ]
         },
-        "item": {
+        "question": {
           "type": [
             "string"
           ]
         },
-        "question": {
+        "item": {
           "type": [
             "string"
           ]

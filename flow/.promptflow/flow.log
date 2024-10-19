@@ -1,12 +1,12 @@
-2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Start executing nodes in thread pool mode.
-2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
-2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Executing node context. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_context_0
-2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Node context completes.
-2024-10-18 15:00:33 +0800   25084 execution.flow     INFO     Executing node Summary. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_Summary_0
-2024-10-18 15:00:34 +0800   25084 execution.flow     INFO     Node Summary completes.
-2024-10-18 15:00:34 +0800   25084 execution.flow     INFO     Executing node Embedding_inputs. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_Embedding_inputs_0
-2024-10-18 15:00:41 +0800   25084 execution.flow     INFO     Node Embedding_inputs completes.
-2024-10-18 15:00:41 +0800   25084 execution.flow     INFO     Executing node seach_from_ai_search. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_seach_from_ai_search_0
-2024-10-18 15:00:42 +0800   25084 execution.flow     INFO     Node seach_from_ai_search completes.
-2024-10-18 15:00:42 +0800   25084 execution.flow     INFO     Executing node chat. node run id: 0eb02718-8a6b-44b5-a2df-ef1774ad3ee6_chat_0
-2024-10-18 15:00:43 +0800   25084 execution.flow     INFO     Node chat completes.
+2024-10-18 17:29:58 +0800   32987 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-10-18 17:29:58 +0800   32987 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
+2024-10-18 17:29:58 +0800   32987 execution.flow     INFO     Executing node context. node run id: 5d47b0e3-ebce-408d-9007-74f3fbc38fc8_context_0
+2024-10-18 17:29:58 +0800   32987 execution.flow     INFO     Node context completes.
+2024-10-18 17:29:58 +0800   32987 execution.flow     INFO     Executing node Summary. node run id: 5d47b0e3-ebce-408d-9007-74f3fbc38fc8_Summary_0
+2024-10-18 17:29:59 +0800   32987 execution.flow     INFO     Node Summary completes.
+2024-10-18 17:29:59 +0800   32987 execution.flow     INFO     Executing node Embedding_inputs. node run id: 5d47b0e3-ebce-408d-9007-74f3fbc38fc8_Embedding_inputs_0
+2024-10-18 17:29:59 +0800   32987 execution.flow     INFO     Node Embedding_inputs completes.
+2024-10-18 17:29:59 +0800   32987 execution.flow     INFO     Executing node seach_from_ai_search. node run id: 5d47b0e3-ebce-408d-9007-74f3fbc38fc8_seach_from_ai_search_0
+2024-10-18 17:30:00 +0800   32987 execution.flow     INFO     Node seach_from_ai_search completes.
+2024-10-18 17:30:00 +0800   32987 execution.flow     INFO     Executing node chat. node run id: 5d47b0e3-ebce-408d-9007-74f3fbc38fc8_chat_0
+2024-10-18 17:30:03 +0800   32987 execution.flow     INFO     Node chat completes.

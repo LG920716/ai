@@ -15,11 +15,13 @@
         }
       }
     },
-    "chat": {
+    "title": {
       "variant_0": {
         "inputs": {
           "item": [],
-          "chat_history": []
+          "chat_history": [],
+          "context": [],
+          "question": []
         }
       }
     },
@@ -35,6 +37,22 @@
       "variant_0": {
         "inputs": {
           "input_str": []
+        }
+      }
+    },
+    "title_categroy": {
+      "variant_0": {
+        "inputs": {
+          "context": [],
+          "question": []
+        }
+      }
+    },
+    "preprocess_image": {
+      "variant_0": {
+        "inputs": {
+          "input_image": [],
+          "image_url": []
         }
       }
     }

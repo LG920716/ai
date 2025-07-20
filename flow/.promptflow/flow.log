@@ -1,12 +1,22 @@
-2025-06-25 17:55:47 +0800   97991 execution.flow     INFO     Start executing nodes in thread pool mode.
-2025-06-25 17:55:47 +0800   97991 execution.flow     INFO     Start to run 2 nodes with concurrency level 16.
-2025-06-25 17:55:47 +0800   97991 execution.flow     INFO     Executing node context. node run id: e929009f-dfbb-4548-a630-8bbd092bc1ee_context_0
-2025-06-25 17:55:47 +0800   97991 execution.flow     INFO     Node context completes.
-2025-06-25 17:55:47 +0800   97991 execution.flow     INFO     Executing node chat. node run id: e929009f-dfbb-4548-a630-8bbd092bc1ee_chat_0
-2025-06-25 17:55:48 +0800   97991 execution.flow     INFO     Node chat completes.
-2025-06-25 17:55:52 +0800   97991 execution.flow     INFO     Start executing nodes in thread pool mode.
-2025-06-25 17:55:52 +0800   97991 execution.flow     INFO     Start to run 2 nodes with concurrency level 16.
-2025-06-25 17:55:52 +0800   97991 execution.flow     INFO     Executing node context. node run id: 31535427-d64a-4c54-91e2-2c9a31ea6083_context_0
-2025-06-25 17:55:52 +0800   97991 execution.flow     INFO     Node context completes.
-2025-06-25 17:55:52 +0800   97991 execution.flow     INFO     Executing node chat. node run id: 31535427-d64a-4c54-91e2-2c9a31ea6083_chat_0
-2025-06-25 17:55:53 +0800   97991 execution.flow     INFO     Node chat completes.
+2025-07-15 10:11:03 +0800   33973 execution.flow     INFO     Start executing nodes in thread pool mode.
+2025-07-15 10:11:03 +0800   33973 execution.flow     INFO     Start to run 7 nodes with concurrency level 16.
+2025-07-15 10:11:03 +0800   33973 execution.flow     INFO     Executing node title. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_title_0
+2025-07-15 10:11:03 +0800   33973 execution.flow     INFO     Executing node context. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_context_0
+2025-07-15 10:11:03 +0800   33973 execution.flow     INFO     Node context completes.
+2025-07-15 10:11:04 +0800   33973 execution.flow     INFO     Node title completes.
+2025-07-15 10:11:04 +0800   33973 execution.flow     INFO     The node 'preprocess_image' will be executed because the activate condition is met, i.e. '${title.output}' is equal to 'N'.
+2025-07-15 10:11:04 +0800   33973 execution.flow     INFO     The node 'title_categroy' will be bypassed because the activate condition is not met, i.e. '${title.output}' is not equal to 'Y'.
+2025-07-15 10:11:04 +0800   33973 execution.flow     INFO     Bypassing node title_categroy. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_title_categroy_0
+2025-07-15 10:11:04 +0800   33973 execution.flow     INFO     The node 'preprocess_image' will be executed because the activate condition is met, i.e. '${title.output}' is equal to 'N'.
+2025-07-15 10:11:04 +0800   33973 execution.flow     INFO     Executing node preprocess_image. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_preprocess_image_0
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     Node preprocess_image completes.
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     The node 'no_image' will be executed because the activate condition is met, i.e. '${preprocess_image.output.has_image}' is equal to 'False'.
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     The node 'image' will be bypassed because the activate condition is not met, i.e. '${preprocess_image.output.has_image}' is not equal to 'True'.
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     Bypassing node image. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_image_0
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     The node 'no_image' will be executed because the activate condition is met, i.e. '${preprocess_image.output.has_image}' is equal to 'False'.
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     Executing node no_image. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_no_image_0
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     Node no_image completes.
+2025-07-15 10:11:05 +0800   33973 execution.flow     WARNING  The node 'title_categroy' referenced by the input 'title_categroy' of the current node 'generate_response' has been bypassed, and no default value is set. Will use 'None' as the value for this input.
+2025-07-15 10:11:05 +0800   33973 execution.flow     WARNING  The node 'image' referenced by the input 'image' of the current node 'generate_response' has been bypassed, and no default value is set. Will use 'None' as the value for this input.
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     Executing node generate_response. node run id: d93c84ad-36cb-4440-a84a-b9495d4dd652_generate_response_0
+2025-07-15 10:11:05 +0800   33973 execution.flow     INFO     Node generate_response completes.

@@ -2,7 +2,7 @@ from promptflow.core import tool
 from promptflow.contracts.multimedia import Image as PFImage
 import requests
 import io
-from PIL import Image as PILImage
+from PIL import Image as PILImage, UnidentifiedImageError
 
 @tool
 def image_check(image_url: str) -> dict:
@@ -15,28 +15,33 @@ def image_check(image_url: str) -> dict:
         return result
 
     try:
+        # 嘗試下載圖片
         response = requests.get(image_url, stream=True, timeout=5)
         response.raise_for_status()
 
+        # 轉為 BytesIO
         image_bytes_io = io.BytesIO(response.content)
 
+        # 驗證是否為有效圖片
         try:
-            image_bytes_io.seek(0)
             pil_image = PILImage.open(image_bytes_io)
-            pil_image.verify()
+            pil_image.verify()  # 這會破壞 stream pointer，要重新 seek
             image_bytes_io.seek(0)
-
-        except PILImage.UnidentifiedImageError:
+        except UnidentifiedImageError:
+            return result
+        except Exception:
             return result
 
-        content_type = response.headers.get('Content-Type', 'application/octet-stream')
+        # 確認 Content-Type 是圖片格式
+        content_type = response.headers.get('Content-Type', '')
         if not content_type.startswith('image/'):
             return result
 
+        # 包裝成 PFImage 格式給 PromptFlow
         result["image"] = PFImage(data=image_bytes_io.getvalue(), mime_type=content_type)
         result["has_image"] = True
 
-    except requests.exceptions.RequestException:
+    except requests.RequestException:
         pass
     except Exception:
         pass

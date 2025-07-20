@@ -50,26 +50,15 @@
       "source": "context.py",
       "function": "aldult_merchandise"
     },
-    "chat.jinja2": {
-      "type": "llm",
-      "inputs": {
-        "context": {
-          "type": [
-            "string"
-          ]
-        },
-        "question": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "source": "chat.jinja2"
-    },
     "image.jinja2": {
       "type": "prompt",
       "inputs": {
-        "text": {
+        "image_input": {
+          "type": [
+            "image"
+          ]
+        },
+        "context": {
           "type": [
             "string"
           ]
@@ -85,7 +74,7 @@
             "string"
           ]
         },
-        "question": {
+        "title": {
           "type": [
             "string"
           ]
@@ -108,29 +97,56 @@
     "no_image.py": {
       "type": "python",
       "source": "no_image.py",
-      "function": "no_image"
+      "function": "no_image_handler"
     },
     "generate_response.py": {
       "type": "python",
       "inputs": {
-        "no_image": {
+        "title": {
           "type": [
-            "object"
-          ]
-        },
-        "image": {
-          "type": [
-            "object"
+            "string"
           ]
         },
         "title_categroy": {
           "type": [
-            "object"
+            "string"
+          ]
+        },
+        "no_image": {
+          "type": [
+            "string"
+          ]
+        },
+        "image": {
+          "type": [
+            "string"
           ]
         }
       },
       "source": "generate_response.py",
-      "function": "no_image"
+      "function": "generate_response"
+    },
+    "title.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "title": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "title.jinja2"
+    },
+    "prompt_node_eivn.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "prompt_node_eivn.jinja2"
     }
   },
   "package": {

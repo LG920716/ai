@@ -21,7 +21,8 @@
           "item": [],
           "chat_history": [],
           "context": [],
-          "question": []
+          "question": [],
+          "title": []
         }
       }
     },
@@ -44,7 +45,7 @@
       "variant_0": {
         "inputs": {
           "context": [],
-          "question": []
+          "title": []
         }
       }
     },
@@ -53,6 +54,21 @@
         "inputs": {
           "input_image": [],
           "image_url": []
+        }
+      }
+    },
+    "image": {
+      "variant_0": {
+        "inputs": {
+          "image_input": [],
+          "context": []
+        }
+      }
+    },
+    "generate_response": {
+      "variant_0": {
+        "inputs": {
+          "title": []
         }
       }
     }

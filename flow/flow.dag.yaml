@@ -51,7 +51,6 @@ nodes:
   inputs:
     connection: momo
     api: chat
-    deployment_name: gpt-4o-2
     temperature: 0.95
     image_input: ${preprocess_image.output}
     context: ${context.output}
@@ -69,7 +68,6 @@ nodes:
     api: chat
     context: ${context.output}
     title: ${title.output}
-    deployment_name: gpt-4o-2
     temperature: 0.95
   activate:
     when: ${title.output}
@@ -106,6 +104,5 @@ nodes:
     path: generate_response.py
   inputs:
     no_image: ${no_image.output}
-    title_categroy: ${title_categroy.output}
     image: ${image.output}
     title: ${title.output}

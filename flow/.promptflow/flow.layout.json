@@ -1,17 +1,17 @@
 {
   "nodeLayouts": {
     "inputs": {
-      "x": 1057.5,
+      "x": 765,
       "y": 42,
       "index": -1
     },
     "outputs": {
-      "x": 647.5,
+      "x": 695,
       "y": 712,
       "index": -1
     },
     "title": {
-      "x": 810,
+      "x": 140,
       "y": 176,
       "index": 0
     },
@@ -21,32 +21,32 @@
       "index": -1
     },
     "context": {
-      "x": 315,
+      "x": 382.5,
       "y": 310,
       "index": 5
     },
     "preprocess_image": {
-      "x": 800,
+      "x": 867.5,
       "y": 310,
       "index": 3
     },
     "no_image": {
-      "x": 820,
+      "x": 945,
       "y": 444,
       "index": 4
     },
     "generate_response": {
-      "x": 567.5,
+      "x": 615,
       "y": 578,
       "index": 6
     },
     "title_categroy": {
-      "x": 140,
+      "x": 285,
       "y": 444,
       "index": 2
     },
     "image": {
-      "x": 470,
+      "x": 615,
       "y": 444,
       "index": 1
     }

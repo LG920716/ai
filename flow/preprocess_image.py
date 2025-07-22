@@ -15,29 +15,29 @@ def image_check(image_url: str) -> dict:
         return result
 
     try:
-        # 嘗試下載圖片
-        response = requests.get(image_url, stream=True, timeout=5)
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Referer": image_url
+        }
+
+        response = requests.get(image_url, headers=headers, stream=True, timeout=5)
         response.raise_for_status()
 
-        # 轉為 BytesIO
-        image_bytes_io = io.BytesIO(response.content)
-
-        # 驗證是否為有效圖片
-        try:
-            pil_image = PILImage.open(image_bytes_io)
-            pil_image.verify()  # 這會破壞 stream pointer，要重新 seek
-            image_bytes_io.seek(0)
-        except UnidentifiedImageError:
-            return result
-        except Exception:
-            return result
-
-        # 確認 Content-Type 是圖片格式
         content_type = response.headers.get('Content-Type', '')
         if not content_type.startswith('image/'):
             return result
 
-        # 包裝成 PFImage 格式給 PromptFlow
+        if len(response.content) < 1024:  # 太小，可能是 HTML 錯誤頁面
+            return result
+
+        image_bytes_io = io.BytesIO(response.content)
+
+        try:
+            pil_image = PILImage.open(image_bytes_io).convert("RGB")
+            image_bytes_io.seek(0)
+        except (UnidentifiedImageError, OSError):
+            return result
+
         result["image"] = PFImage(data=image_bytes_io.getvalue(), mime_type=content_type)
         result["has_image"] = True
 

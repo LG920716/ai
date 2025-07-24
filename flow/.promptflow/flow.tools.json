@@ -85,14 +85,14 @@
     "preprocess_image.py": {
       "type": "python",
       "inputs": {
-        "image_url": {
+        "url": {
           "type": [
             "string"
           ]
         }
       },
       "source": "preprocess_image.py",
-      "function": "image_check"
+      "function": "load_image_from_url"
     },
     "no_image.py": {
       "type": "python",

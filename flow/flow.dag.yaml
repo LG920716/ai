@@ -6,7 +6,7 @@ inputs:
   title:
     type: string
     is_chat_input: true
-    default: 【TANAH】斷色特價 台灣製造 運動涼感毛巾 防曬抗uv涼感袖套 涼感頭巾 3入(SUPER酷涼巾 涼感增加200%)
+    default: 情趣職人】Alice Japan｜濕身公主姬 催淫HOT｜情趣提升凝膠(高潮液  女用高潮液 情趣職人)
     is_chat_history: false
   tokens_per_message:
     type: int
@@ -22,7 +22,7 @@ inputs:
     is_chat_history: true
   img_url:
     type: string
-    default: https://og.momoshop.com.tw/goodsimg/0010/234/079/10234079_B.jpg
+    default: https://og.momoshop.com.tw/goodsimg/0013/176/853/13176853_B.jpg
 outputs:
   answer:
     type: string

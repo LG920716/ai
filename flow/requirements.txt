@@ -6,3 +6,8 @@ promptflow-tools
 promptflow-azure
 tenacity==8.2.2
 requests
+pandas
+requests
+scikit-learn
+matplotlib
+seaborn

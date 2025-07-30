@@ -1,20 +1,24 @@
-2025-07-24 13:58:52 +0800   32695 execution.flow     INFO     Start executing nodes in thread pool mode.
-2025-07-24 13:58:52 +0800   32695 execution.flow     INFO     Start to run 7 nodes with concurrency level 16.
-2025-07-24 13:58:52 +0800   32695 execution.flow     INFO     Executing node title. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_title_0
-2025-07-24 13:58:52 +0800   32695 execution.flow     INFO     Executing node context. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_context_0
-2025-07-24 13:58:52 +0800   32695 execution.flow     INFO     Node context completes.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     Node title completes.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     The node 'preprocess_image' will be bypassed because the activate condition is not met, i.e. '${title.output}' is not equal to 'N'.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     The node 'no_image' will be bypassed because it depends on the node 'preprocess_image' which has already been bypassed in the activate config.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     The node 'image' will be bypassed because it depends on the node 'preprocess_image' which has already been bypassed in the activate config.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     The node 'title_categroy' will be executed because the activate condition is met, i.e. '${title.output}' is equal to 'Y'.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     Bypassing node preprocess_image. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_preprocess_image_0
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     Bypassing node no_image. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_no_image_0
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     Bypassing node image. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_image_0
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     The node 'title_categroy' will be executed because the activate condition is met, i.e. '${title.output}' is equal to 'Y'.
-2025-07-24 13:58:54 +0800   32695 execution.flow     INFO     Executing node title_categroy. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_title_categroy_0
-2025-07-24 13:58:56 +0800   32695 execution.flow     INFO     Node title_categroy completes.
-2025-07-24 13:58:56 +0800   32695 execution.flow     WARNING  The node 'no_image' referenced by the input 'no_image' of the current node 'generate_response' has been bypassed, and no default value is set. Will use 'None' as the value for this input.
-2025-07-24 13:58:56 +0800   32695 execution.flow     WARNING  The node 'image' referenced by the input 'image' of the current node 'generate_response' has been bypassed, and no default value is set. Will use 'None' as the value for this input.
-2025-07-24 13:58:56 +0800   32695 execution.flow     INFO     Executing node generate_response. node run id: 26f7ef50-cd00-44f9-953f-7a95d7a0401c_generate_response_0
-2025-07-24 13:58:56 +0800   32695 execution.flow     INFO     Node generate_response completes.
+2025-07-28 16:46:37 +0800   71038 execution.flow     INFO     Start executing nodes in thread pool mode.
+2025-07-28 16:46:37 +0800   71038 execution.flow     INFO     Start to run 7 nodes with concurrency level 16.
+2025-07-28 16:46:37 +0800   71038 execution.flow     INFO     Executing node title. node run id: f66057ad-6055-476a-8e94-421310c68233_title_0
+2025-07-28 16:46:37 +0800   71038 execution.flow     INFO     Executing node context. node run id: f66057ad-6055-476a-8e94-421310c68233_context_0
+2025-07-28 16:46:37 +0800   71038 execution.flow     INFO     Node context completes.
+2025-07-28 16:46:38 +0800   71038 execution.flow     INFO     Node title completes.
+2025-07-28 16:46:38 +0800   71038 execution.flow     INFO     The node 'preprocess_image' will be executed because the activate condition is met, i.e. '${title.output}' is equal to 'N'.
+2025-07-28 16:46:38 +0800   71038 execution.flow     INFO     The node 'title_categroy' will be bypassed because the activate condition is not met, i.e. '${title.output}' is not equal to 'Y'.
+2025-07-28 16:46:38 +0800   71038 execution.flow     INFO     Bypassing node title_categroy. node run id: f66057ad-6055-476a-8e94-421310c68233_title_categroy_0
+2025-07-28 16:46:38 +0800   71038 execution.flow     INFO     The node 'preprocess_image' will be executed because the activate condition is met, i.e. '${title.output}' is equal to 'N'.
+2025-07-28 16:46:38 +0800   71038 execution.flow     INFO     Executing node preprocess_image. node run id: f66057ad-6055-476a-8e94-421310c68233_preprocess_image_0
+2025-07-28 16:46:39 +0800   71038 execution.flow     WARNING  Output of preprocess_image is not json serializable, use str to store it.
+2025-07-28 16:46:39 +0800   71038 execution.flow     INFO     Node preprocess_image completes.
+2025-07-28 16:46:39 +0800   71038 execution.flow     INFO     The node 'no_image' will be bypassed because the activate condition is not met, i.e. '${preprocess_image.output.has_image}' is not equal to 'False'.
+2025-07-28 16:46:39 +0800   71038 execution.flow     INFO     The node 'image' will be executed because the activate condition is met, i.e. '${preprocess_image.output.has_image}' is equal to 'True'.
+2025-07-28 16:46:39 +0800   71038 execution.flow     INFO     Bypassing node no_image. node run id: f66057ad-6055-476a-8e94-421310c68233_no_image_0
+2025-07-28 16:46:39 +0800   71038 execution.flow     INFO     The node 'image' will be executed because the activate condition is met, i.e. '${preprocess_image.output.has_image}' is equal to 'True'.
+2025-07-28 16:46:39 +0800   71038 execution.flow     INFO     Executing node image. node run id: f66057ad-6055-476a-8e94-421310c68233_image_0
+2025-07-28 16:46:40 +0800   71038 execution.flow     WARNING  Input 'image_input' of image is not json serializable, use str to store it.
+2025-07-28 16:46:40 +0800   71038 execution.flow     INFO     Node image completes.
+2025-07-28 16:46:40 +0800   71038 execution.flow     WARNING  The node 'no_image' referenced by the input 'no_image' of the current node 'generate_response' has been bypassed, and no default value is set. Will use 'None' as the value for this input.
+2025-07-28 16:46:40 +0800   71038 execution.flow     WARNING  The node 'title_categroy' referenced by the input 'title_category' of the current node 'generate_response' has been bypassed, and no default value is set. Will use 'None' as the value for this input.
+2025-07-28 16:46:40 +0800   71038 execution.flow     INFO     Executing node generate_response. node run id: f66057ad-6055-476a-8e94-421310c68233_generate_response_0
+2025-07-28 16:46:40 +0800   71038 execution.flow     INFO     Node generate_response completes.

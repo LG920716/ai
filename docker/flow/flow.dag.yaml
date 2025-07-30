@@ -6,7 +6,7 @@ inputs:
   title:
     type: string
     is_chat_input: true
-    default: 【TANAH】斷色特價 台灣製造 運動涼感毛巾 防曬抗uv涼感袖套 涼感頭巾 3入(SUPER酷涼巾 涼感增加200%)
+    default: 【HARU 含春】ORGASM 大麻籽熱浪情迷水溶性潤滑液/G.O.A.T. 大麻冰火陰蒂高潮液 套組(大麻籽 熱感潤滑液 陰蒂高潮液)
     is_chat_history: false
   tokens_per_message:
     type: int
@@ -22,7 +22,7 @@ inputs:
     is_chat_history: true
   img_url:
     type: string
-    default: https://og.momoshop.com.tw/goodsimg/0010/234/079/10234079_B.jpg
+    default: https://og.momoshop.com.tw/goodsimg/0013/176/853/13176853_B.jpg
 outputs:
   answer:
     type: string
@@ -35,7 +35,7 @@ nodes:
     type: code
     path: title.jinja2
   inputs:
-    temperature: 0.95
+    temperature: 0
     model: gpt-4o
     deployment_name: gpt-4o-2
     max_tokens: 4096
@@ -51,10 +51,11 @@ nodes:
   inputs:
     connection: momo
     api: chat
-    temperature: 0.95
+    temperature: 0
     image_input: ${preprocess_image.output}
     context: ${context.output}
     deployment_name: gpt-4o-2
+    max_tokens: 4096
   activate:
     when: ${preprocess_image.output.has_image}
     is: true
@@ -68,9 +69,10 @@ nodes:
     connection: momo
     api: chat
     context: ${context.output}
-    title: ${title.output}
-    temperature: 0.95
+    title: ${inputs.title}
+    temperature: 0
     deployment_name: gpt-4o-2
+    max_tokens: 4096
   activate:
     when: ${title.output}
     is: Y

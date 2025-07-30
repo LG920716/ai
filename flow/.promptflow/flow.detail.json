@@ -1,58 +1,58 @@
 {
   "flow_runs": [
     {
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
       "status": "Completed",
       "error": null,
       "inputs": {
-        "title": "情趣職人】Alice Japan｜濕身公主姬 催淫HOT｜情趣提升凝膠(高潮液  女用高潮液 情趣職人)",
+        "title": "【Aubade】暗影女王奢華植葉刺繡性感吊襪帶 褲襪 蕾絲襪帶 法國進口 女內衣配件(1E-黑)",
         "tokens_per_message": 2,
         "tokens_per_name": 1,
         "chat_history": [],
-        "img_url": "https://og.momoshop.com.tw/goodsimg/0013/176/853/13176853_B.jpg"
+        "img_url": "https://og.momoshop.com.tw/goodsimg/0012/495/358/12495358_B.jpg"
       },
       "output": {
         "answer": {
-          "title_result": "Y",
-          "image_result": "-",
-          "category": "跳蛋"
+          "title_result": "N",
+          "image_result": "N",
+          "category": "非成人商品"
         }
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "root_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "root_run_id": "f66057ad-6055-476a-8e94-421310c68233",
       "source_run_id": null,
       "flow_id": "template_chat_flow",
-      "start_time": "2025-07-24T05:58:52.979316Z",
-      "end_time": "2025-07-24T05:58:56.183363Z",
+      "start_time": "2025-07-28T08:46:37.205145Z",
+      "end_time": "2025-07-28T08:46:40.848035Z",
       "index": 0,
       "api_calls": [
         {
           "name": "flow",
           "node_name": "flow",
           "type": "Flow",
-          "start_time": 1753307932.979316,
-          "end_time": 1753307936.183363,
+          "start_time": 1753663597.205145,
+          "end_time": 1753663600.848035,
           "children": [],
           "system_metrics": {
-            "duration": 3.204047,
+            "duration": 3.64289,
             "prompt_tokens": 0,
             "completion_tokens": 0,
             "total_tokens": 0
           },
           "inputs": {
-            "title": "情趣職人】Alice Japan｜濕身公主姬 催淫HOT｜情趣提升凝膠(高潮液  女用高潮液 情趣職人)",
+            "title": "【Aubade】暗影女王奢華植葉刺繡性感吊襪帶 褲襪 蕾絲襪帶 法國進口 女內衣配件(1E-黑)",
             "tokens_per_message": 2,
             "tokens_per_name": 1,
             "chat_history": [],
-            "img_url": "https://og.momoshop.com.tw/goodsimg/0013/176/853/13176853_B.jpg"
+            "img_url": "https://og.momoshop.com.tw/goodsimg/0012/495/358/12495358_B.jpg"
           },
           "output": {
             "answer": {
-              "title_result": "Y",
-              "image_result": "-",
-              "category": "跳蛋"
+              "title_result": "N",
+              "image_result": "N",
+              "category": "非成人商品"
             }
           },
           "error": null
@@ -62,16 +62,16 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 3.204047,
+        "duration": 3.64289,
         "prompt_tokens": 0,
         "completion_tokens": 0,
         "total_tokens": 0
       },
       "result": {
         "answer": {
-          "title_result": "Y",
-          "image_result": "-",
-          "category": "跳蛋"
+          "title_result": "N",
+          "image_result": "N",
+          "category": "非成人商品"
         }
       },
       "upload_metrics": false,
@@ -82,25 +82,25 @@
   "node_runs": [
     {
       "node": "title",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_title_0",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_title_0",
       "status": "Completed",
       "inputs": {
-        "temperature": 0.95,
+        "temperature": 0.0,
         "model": "gpt-4o",
         "deployment_name": "gpt-4o-2",
         "max_tokens": 4096,
-        "title": "情趣職人】Alice Japan｜濕身公主姬 催淫HOT｜情趣提升凝膠(高潮液  女用高潮液 情趣職人)",
+        "title": "【Aubade】暗影女王奢華植葉刺繡性感吊襪帶 褲襪 蕾絲襪帶 法國進口 女內衣配件(1E-黑)",
         "_inputs_to_escape": [
           "title"
         ]
       },
-      "output": "Y",
+      "output": "N",
       "metrics": null,
       "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:52.980327Z",
-      "end_time": "2025-07-24T05:58:54.411057Z",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:37.205879Z",
+      "end_time": "2025-07-28T08:46:38.522782Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -110,15 +110,15 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 1.43073
+        "duration": 1.316903
       },
-      "result": "Y",
+      "result": "N",
       "message_format": "basic"
     },
     {
       "node": "context",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_context_0",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_context_0",
       "status": "Completed",
       "inputs": {},
       "output": {
@@ -282,9 +282,9 @@
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:52.984265Z",
-      "end_time": "2025-07-24T05:58:52.984456Z",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:37.209589Z",
+      "end_time": "2025-07-28T08:46:37.209731Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -294,7 +294,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000191
+        "duration": 0.000142
       },
       "result": {
         "adult_product_categories": {
@@ -458,17 +458,17 @@
       "message_format": "basic"
     },
     {
-      "node": "preprocess_image",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_preprocess_image_0",
+      "node": "title_categroy",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_title_categroy_0",
       "status": "Bypassed",
       "inputs": null,
       "output": null,
       "metrics": null,
       "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:54.412390Z",
-      "end_time": "2025-07-24T05:58:54.412392Z",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:38.524016Z",
+      "end_time": "2025-07-28T08:46:38.524018Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -479,17 +479,45 @@
       "message_format": "basic"
     },
     {
+      "node": "preprocess_image",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_preprocess_image_0",
+      "status": "Completed",
+      "inputs": {
+        "url": "https://og.momoshop.com.tw/goodsimg/0012/495/358/12495358_B.jpg"
+      },
+      "output": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x118DBF260>, 'has_image': True}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:38.524334Z",
+      "end_time": "2025-07-28T08:46:39.234312Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.709978
+      },
+      "result": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x118DBF260>, 'has_image': True}",
+      "message_format": "basic"
+    },
+    {
       "node": "no_image",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_no_image_0",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_no_image_0",
       "status": "Bypassed",
       "inputs": null,
       "output": null,
       "metrics": null,
       "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:54.412474Z",
-      "end_time": "2025-07-24T05:58:54.412476Z",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:39.235267Z",
+      "end_time": "2025-07-28T08:46:39.235269Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -501,33 +529,14 @@
     },
     {
       "node": "image",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_image_0",
-      "status": "Bypassed",
-      "inputs": null,
-      "output": null,
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:54.412535Z",
-      "end_time": "2025-07-24T05:58:54.412536Z",
-      "index": 0,
-      "api_calls": [],
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": null,
-      "system_metrics": null,
-      "result": null,
-      "message_format": "basic"
-    },
-    {
-      "node": "title_categroy",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_title_categroy_0",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_image_0",
       "status": "Completed",
       "inputs": {
         "connection": "momo",
         "api": "chat",
+        "temperature": 0.0,
+        "image_input": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x118DBF260>, 'has_image': True}",
         "context": {
           "adult_product_categories": {
             "環類": [
@@ -687,16 +696,15 @@
             ]
           }
         },
-        "title": "Y",
-        "temperature": 0.95,
-        "deployment_name": "gpt-4o-2"
+        "deployment_name": "gpt-4o-2",
+        "max_tokens": 4096
       },
-      "output": "跳蛋",
+      "output": "N",
       "metrics": null,
       "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:54.413059Z",
-      "end_time": "2025-07-24T05:58:56.180605Z",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:39.236110Z",
+      "end_time": "2025-07-28T08:46:40.845522Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -706,32 +714,32 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 1.767546
+        "duration": 1.609412
       },
-      "result": "跳蛋",
+      "result": "N",
       "message_format": "basic"
     },
     {
       "node": "generate_response",
-      "flow_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c",
-      "run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_generate_response_0",
+      "flow_run_id": "f66057ad-6055-476a-8e94-421310c68233",
+      "run_id": "f66057ad-6055-476a-8e94-421310c68233_generate_response_0",
       "status": "Completed",
       "inputs": {
         "no_image": null,
-        "image": null,
-        "title": "Y",
-        "title_category": "跳蛋"
+        "image": "N",
+        "title": "N",
+        "title_category": null
       },
       "output": {
-        "title_result": "Y",
-        "image_result": "-",
-        "category": "跳蛋"
+        "title_result": "N",
+        "image_result": "N",
+        "category": "非成人商品"
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "26f7ef50-cd00-44f9-953f-7a95d7a0401c_0",
-      "start_time": "2025-07-24T05:58:56.182247Z",
-      "end_time": "2025-07-24T05:58:56.182486Z",
+      "parent_run_id": "f66057ad-6055-476a-8e94-421310c68233_0",
+      "start_time": "2025-07-28T08:46:40.846933Z",
+      "end_time": "2025-07-28T08:46:40.847254Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -741,12 +749,12 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000239
+        "duration": 0.000321
       },
       "result": {
-        "title_result": "Y",
-        "image_result": "-",
-        "category": "跳蛋"
+        "title_result": "N",
+        "image_result": "N",
+        "category": "非成人商品"
       },
       "message_format": "basic"
     }

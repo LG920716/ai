@@ -20,6 +20,22 @@ type_code_dict = {
     '性感睡衣': '1900600003'
 }
 
+# 定義分類等價群組
+CATEGORY_EQUIVALENCE = [
+    {"仿真娃娃", "飛機杯"},
+    {"情趣按摩棒", "跳蛋"},
+    {"乳夾", "震動環"},
+    {"情趣內衣", "性感睡衣"},
+    {"吸吮器", "真空吸引器"},
+    {"威而柔", "活力保養", "基本型", "備孕潤滑液"},
+]
+
+# 建立一個快速查表 dict
+EQUIVALENT_MAP = {}
+for group in CATEGORY_EQUIVALENCE:
+    for item in group:
+        EQUIVALENT_MAP[item] = group
+
 # 定義 18 禁分類清單
 ADULT_CATEGORIES = set(type_code_dict.keys())
 
@@ -92,15 +108,26 @@ def main():
         if row["category"] == "ERROR":
             return False
 
-        pred_is_adult = row["category"] in ADULT_CATEGORIES
-        true_is_adult = row["L4_CAT_NAME"] in ADULT_CATEGORIES
+        pred_cat = row["category"]
+        true_cat = row["L4_CAT_NAME"]
+
+        pred_is_adult = pred_cat in ADULT_CATEGORIES
+        true_is_adult = true_cat in ADULT_CATEGORIES
 
         if pred_is_adult and true_is_adult:
-            return row["category"] == row["L4_CAT_NAME"]  # 成人 → 成人，還要分類正確
+            # 新邏輯：若在相同等價群組內也算正確
+            if pred_cat == true_cat:
+                return True
+            elif (pred_cat in EQUIVALENT_MAP and true_cat in EQUIVALENT_MAP and
+                EQUIVALENT_MAP[pred_cat] == EQUIVALENT_MAP[true_cat]):
+                return True
+            else:
+                return False
         elif not pred_is_adult and not true_is_adult:
-            return True  # 非成人 → 非成人，只要預測非成人就算對
+            return True
         else:
-            return False  # 一個成人一個非成人 → 錯誤
+            return False
+
 
     output_df["is_correct"] = output_df.apply(check_is_correct, axis=1)
 
@@ -136,8 +163,8 @@ def main():
     # === 混淆矩陣（預測的是否是成人 vs 真實是否是成人）===
     print("\n📊 混淆矩陣（rows = 預測是否為成人, cols = 真實是否為成人）")
     matrix = confusion_matrix(
-        df["is_adult_pred"],
-        df["is_adult_true"],
+        output_df["is_adult_pred"],
+        output_df["is_adult_true"],
         labels=[True, False]
     )
     print(f"""

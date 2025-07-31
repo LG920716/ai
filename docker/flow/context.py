@@ -162,7 +162,7 @@ def aldult_merchandise():
             ],
             "其他": [
             {
-                "id": 26,
+                "id": 25,
                 "name": "其他",
                 "description": "無法歸類的情趣商品"
             }

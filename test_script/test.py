@@ -13,15 +13,39 @@ type_code_dict = {
 }
 ADULT_CATEGORIES = set(type_code_dict.keys())
 
+# 分類等價群組
+CATEGORY_EQUIVALENCE = [
+    {"仿真娃娃", "飛機杯"},
+    {"情趣按摩棒", "跳蛋"},
+    {"乳夾", "震動環"},
+    {"情趣內衣", "性感睡衣"},
+    {"吸吮器", "真空吸引器"}
+]
+# 快速查表
+EQUIVALENT_MAP = {}
+for group in CATEGORY_EQUIVALENCE:
+    for item in group:
+        EQUIVALENT_MAP[item] = group
+
+# 判斷分類是否正確（同主程式邏輯）
 def check_is_correct(row):
     if row["category"] == "ERROR":
         return False
 
-    pred_is_adult = row["category"] in ADULT_CATEGORIES
-    true_is_adult = row["L4_CAT_NAME"] in ADULT_CATEGORIES
+    pred_cat = row["category"]
+    true_cat = row["L4_CAT_NAME"]
+
+    pred_is_adult = pred_cat in ADULT_CATEGORIES
+    true_is_adult = true_cat in ADULT_CATEGORIES
 
     if pred_is_adult and true_is_adult:
-        return row["category"] == row["L4_CAT_NAME"]
+        if pred_cat == true_cat:
+            return True
+        elif (pred_cat in EQUIVALENT_MAP and true_cat in EQUIVALENT_MAP and
+              EQUIVALENT_MAP[pred_cat] == EQUIVALENT_MAP[true_cat]):
+            return True
+        else:
+            return False
     elif not pred_is_adult and not true_is_adult:
         return True
     else:
@@ -35,9 +59,10 @@ def analyze_output(path="data/output.csv"):
     df["is_correct"] = df.apply(check_is_correct, axis=1)
 
     # === 分類準確率 ===
-    correct = df["is_correct"].sum()
-    total = len(df)
-    accuracy = correct / total * 100
+    valid_rows = df[~df["category"].isin(["ERR", "ERROR"])]
+    correct = valid_rows["is_correct"].sum()
+    total = len(valid_rows)
+    accuracy = correct / total * 100 if total > 0 else 0
     print(f"\n🎯 分類準確率：{accuracy:.2f}%（{correct}/{total}）")
 
     # === 成人 / 非成人 區分準確率 ===

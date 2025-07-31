@@ -6,7 +6,7 @@ inputs:
   title:
     type: string
     is_chat_input: true
-    default: 【HARU 含春】ORGASM 大麻籽熱浪情迷水溶性潤滑液/G.O.A.T. 大麻冰火陰蒂高潮液 套組(大麻籽 熱感潤滑液 陰蒂高潮液)
+    default: 【Aubade】暗影女王奢華植葉刺繡性感吊襪帶 褲襪 蕾絲襪帶 法國進口 女內衣配件(1E-黑)
     is_chat_history: false
   tokens_per_message:
     type: int
@@ -22,7 +22,7 @@ inputs:
     is_chat_history: true
   img_url:
     type: string
-    default: https://og.momoshop.com.tw/goodsimg/0013/176/853/13176853_B.jpg
+    default: https://og.momoshop.com.tw/goodsimg/0012/495/358/12495358_B.jpg
 outputs:
   answer:
     type: string

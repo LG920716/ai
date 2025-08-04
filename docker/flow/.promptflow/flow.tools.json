@@ -94,135 +94,6 @@
         }
     },
     "package": {
-        "promptflow.tools.embedding.embedding": {
-            "name": "Embedding",
-            "description": "Use Open AI's embedding model to create an embedding vector representing the input text.",
-            "type": "python",
-            "module": "promptflow.tools.embedding",
-            "function": "embedding",
-            "inputs": {
-                "connection": {
-                    "type": [
-                        "AzureOpenAIConnection",
-                        "OpenAIConnection",
-                        "ServerlessConnection"
-                    ]
-                },
-                "deployment_name": {
-                    "type": [
-                        "string"
-                    ],
-                    "enabled_by": "connection",
-                    "enabled_by_type": [
-                        "AzureOpenAIConnection"
-                    ],
-                    "capabilities": {
-                        "completion": false,
-                        "chat_completion": false,
-                        "embeddings": true
-                    },
-                    "model_list": [
-                        "text-embedding-ada-002",
-                        "text-search-ada-doc-001",
-                        "text-search-ada-query-001"
-                    ]
-                },
-                "model": {
-                    "type": [
-                        "string"
-                    ],
-                    "enabled_by": "connection",
-                    "enabled_by_type": [
-                        "OpenAIConnection"
-                    ],
-                    "enum": [
-                        "text-embedding-ada-002",
-                        "text-search-ada-doc-001",
-                        "text-search-ada-query-001"
-                    ],
-                    "allow_manual_entry": true
-                },
-                "input": {
-                    "type": [
-                        "string"
-                    ]
-                }
-            },
-            "package": "promptflow-tools",
-            "package_version": "1.6.1"
-        },
-        "promptflow.tools.azure_content_safety.analyze_text": {
-            "module": "promptflow.tools.azure_content_safety",
-            "function": "analyze_text",
-            "inputs": {
-                "connection": {
-                    "type": [
-                        "AzureContentSafetyConnection"
-                    ]
-                },
-                "hate_category": {
-                    "default": "medium_sensitivity",
-                    "enum": [
-                        "disable",
-                        "low_sensitivity",
-                        "medium_sensitivity",
-                        "high_sensitivity"
-                    ],
-                    "type": [
-                        "string"
-                    ]
-                },
-                "self_harm_category": {
-                    "default": "medium_sensitivity",
-                    "enum": [
-                        "disable",
-                        "low_sensitivity",
-                        "medium_sensitivity",
-                        "high_sensitivity"
-                    ],
-                    "type": [
-                        "string"
-                    ]
-                },
-                "sexual_category": {
-                    "default": "medium_sensitivity",
-                    "enum": [
-                        "disable",
-                        "low_sensitivity",
-                        "medium_sensitivity",
-                        "high_sensitivity"
-                    ],
-                    "type": [
-                        "string"
-                    ]
-                },
-                "text": {
-                    "type": [
-                        "string"
-                    ]
-                },
-                "violence_category": {
-                    "default": "medium_sensitivity",
-                    "enum": [
-                        "disable",
-                        "low_sensitivity",
-                        "medium_sensitivity",
-                        "high_sensitivity"
-                    ],
-                    "type": [
-                        "string"
-                    ]
-                }
-            },
-            "name": "Content Safety (Text Analyze)",
-            "description": "Use Azure Content Safety to detect harmful content.",
-            "type": "python",
-            "deprecated_tools": [
-                "content_safety_text.tools.content_safety_text_tool.analyze_text"
-            ],
-            "package": "promptflow-tools",
-            "package_version": "1.6.1"
-        },
         "promptflow.tools.aoai_gpt4v.AzureOpenAI.chat": {
             "name": "Azure OpenAI GPT-4 Turbo with Vision",
             "description": "Use Azure OpenAI GPT-4 Turbo with Vision to leverage AOAI vision ability.",
@@ -349,57 +220,132 @@
             "package": "promptflow-tools",
             "package_version": "1.6.1"
         },
-        "promptflow.tools.serpapi.SerpAPI.search": {
-            "name": "Serp API",
-            "description": "Use Serp API to obtain search results from a specific search engine.",
+        "promptflow.tools.azure_content_safety.analyze_text": {
+            "module": "promptflow.tools.azure_content_safety",
+            "function": "analyze_text",
             "inputs": {
                 "connection": {
                     "type": [
-                        "SerpConnection"
+                        "AzureContentSafetyConnection"
                     ]
                 },
-                "engine": {
-                    "default": "google",
+                "hate_category": {
+                    "default": "medium_sensitivity",
                     "enum": [
-                        "google",
-                        "bing"
+                        "disable",
+                        "low_sensitivity",
+                        "medium_sensitivity",
+                        "high_sensitivity"
                     ],
                     "type": [
                         "string"
                     ]
                 },
-                "location": {
-                    "default": "",
-                    "type": [
-                        "string"
-                    ]
-                },
-                "num": {
-                    "default": "10",
-                    "type": [
-                        "int"
-                    ]
-                },
-                "query": {
-                    "type": [
-                        "string"
-                    ]
-                },
-                "safe": {
-                    "default": "off",
+                "self_harm_category": {
+                    "default": "medium_sensitivity",
                     "enum": [
-                        "active",
-                        "off"
+                        "disable",
+                        "low_sensitivity",
+                        "medium_sensitivity",
+                        "high_sensitivity"
+                    ],
+                    "type": [
+                        "string"
+                    ]
+                },
+                "sexual_category": {
+                    "default": "medium_sensitivity",
+                    "enum": [
+                        "disable",
+                        "low_sensitivity",
+                        "medium_sensitivity",
+                        "high_sensitivity"
+                    ],
+                    "type": [
+                        "string"
+                    ]
+                },
+                "text": {
+                    "type": [
+                        "string"
+                    ]
+                },
+                "violence_category": {
+                    "default": "medium_sensitivity",
+                    "enum": [
+                        "disable",
+                        "low_sensitivity",
+                        "medium_sensitivity",
+                        "high_sensitivity"
                     ],
                     "type": [
                         "string"
                     ]
                 }
             },
+            "name": "Content Safety (Text Analyze)",
+            "description": "Use Azure Content Safety to detect harmful content.",
             "type": "python",
-            "module": "promptflow.tools.serpapi",
-            "class_name": "SerpAPI",
-            "function": "search",
+            "deprecated_tools": [
+                "content_safety_text.tools.content_safety_text_tool.analyze_text"
+            ],
+            "package": "promptflow-tools",
+            "package_version": "1.6.1"
+        },
+        "promptflow.tools.embedding.embedding": {
+            "name": "Embedding",
+            "description": "Use Open AI's embedding model to create an embedding vector representing the input text.",
+            "type": "python",
+            "module": "promptflow.tools.embedding",
+            "function": "embedding",
+            "inputs": {
+                "connection": {
+                    "type": [
+                        "AzureOpenAIConnection",
+                        "OpenAIConnection",
+                        "ServerlessConnection"
+                    ]
+                },
+                "deployment_name": {
+                    "type": [
+                        "string"
+                    ],
+                    "enabled_by": "connection",
+                    "enabled_by_type": [
+                        "AzureOpenAIConnection"
+                    ],
+                    "capabilities": {
+                        "completion": false,
+                        "chat_completion": false,
+                        "embeddings": true
+                    },
+                    "model_list": [
+                        "text-embedding-ada-002",
+                        "text-search-ada-doc-001",
+                        "text-search-ada-query-001"
+                    ]
+                },
+                "model": {
+                    "type": [
+                        "string"
+                    ],
+                    "enabled_by": "connection",
+                    "enabled_by_type": [
+                        "OpenAIConnection"
+                    ],
+                    "enum": [
+                        "text-embedding-ada-002",
+                        "text-search-ada-doc-001",
+                        "text-search-ada-query-001"
+                    ],
+                    "allow_manual_entry": true
+                },
+                "input": {
+                    "type": [
+                        "string"
+                    ]
+                }
+            },
             "package": "promptflow-tools",
             "package_version": "1.6.1"
         },
@@ -759,6 +705,160 @@
             "package": "promptflow-tools",
             "package_version": "1.6.1"
         },
+        "promptflow.tools.llm_vision.llm_vision": {
+            "name": "LLM-Vision",
+            "description": {
+                "default": "Use OpenAI-like Large Language Model to leverage vision ability.",
+                "aml": "Use OpenAI-like Large Language Model to leverage vision ability. For more details, refer to this [document](https://aka.ms/promptflow/llm-vision-tool).",
+                "ai_studio": "Use OpenAI-like Large Language Model to leverage vision ability. For more details, refer to this [document](https://aka.ms/aistudio/pf/llm-vision-tool)."
+            },
+            "type": "custom_llm",
+            "module": "promptflow.tools.llm_vision",
+            "function": "llm_vision",
+            "tool_state": "preview",
+            "category": "llm",
+            "icon": {
+                "light": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAx0lEQVR4nJWSwQ2CQBBFX0jAcjgqXUgPJNiIsQQrIVCIFy8GC6ABDcGDX7Mus9n1Xz7zZ+fPsLPwH4bUg0dD2wMPcbR48Uxq4AKU4iSTDwZ1LhWXipN/B3V0J6hjBTvgLHZNonewBXrgDpzEvXSIjN0BE3AACmmF4kl5F6tNzcCoLpW0SvGovFvsb4oZ2AANcAOu4ka6axCcINN3rg654sww+CYsPD0OwjcozFNh/Qcd78tqVbCIW+n+Fky472Bh/Q6SYb1EEy8tDzd+9IsVPAAAAABJRU5ErkJggg==",
+                "dark": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2ElEQVR4nJXSzW3CQBAF4DUSTjk+Al1AD0ikESslpBIEheRALhEpgAYSWV8OGUublf/yLuP3PPNmdndS+gdwXZrYDmh7fGE/W+wXbaYd8IYm4rxJPnZ0boI3wZcdJxs/n+AwV7DFK7aFyfQdYIMLPvES8YJNf5yp4jMeeEYdWh38gXOR35YGHe5xabvQdsHv6PLi8qV6gycc8YH3iMfQu6Lh4ASr+F5Hh3XwVWnQYzUkVlX1nccplAb1SN6Y/sfgmlK64VS8wimldIv/0yj2QLkHizG0iWP4AVAfQ34DVQONAAAAAElFTkSuQmCC"
+            },
+            "default_prompt": "# system:\nAs an AI assistant, your task involves interpreting images and responding to questions about the image.\nRemember to provide accurate answers based on the information present in the image.\n\n# user:\nCan you tell me what the image depicts?\n![image]({{image_input}})\n",
+            "inputs": {
+                "connection": {
+                    "type": [
+                        "AzureOpenAIConnection",
+                        "OpenAIConnection"
+                    ],
+                    "ui_hints": {
+                        "index": 0
+                    }
+                },
+                "deployment_name": {
+                    "type": [
+                        "string"
+                    ],
+                    "enabled_by": "connection",
+                    "enabled_by_type": [
+                        "AzureOpenAIConnection"
+                    ],
+                    "capabilities": {
+                        "chat_completion": true,
+                        "include": {
+                            "model_version": [
+                                "vision-preview"
+                            ]
+                        }
+                    },
+                    "allow_manual_entry": true,
+                    "is_multi_select": false,
+                    "ui_hints": {
+                        "text_box_size": "lg",
+                        "index": 1
+                    }
+                },
+                "model": {
+                    "enabled_by": "connection",
+                    "enabled_by_type": [
+                        "OpenAIConnection"
+                    ],
+                    "enum": [
+                        "gpt-4-vision-preview"
+                    ],
+                    "allow_manual_entry": true,
+                    "type": [
+                        "string"
+                    ],
+                    "ui_hints": {
+                        "text_box_size": "lg",
+                        "index": 2
+                    }
+                },
+                "temperature": {
+                    "default": 1,
+                    "type": [
+                        "double"
+                    ],
+                    "ui_hints": {
+                        "text_box_size": "xs",
+                        "index": 3
+                    }
+                },
+                "top_p": {
+                    "default": 1,
+                    "type": [
+                        "double"
+                    ],
+                    "ui_hints": {
+                        "text_box_size": "xs",
+                        "index": 4
+                    }
+                },
+                "stop": {
+                    "default": "",
+                    "type": [
+                        "list"
+                    ],
+                    "ui_hints": {
+                        "text_box_size": "md",
+                        "index": 5
+                    }
+                },
+                "max_tokens": {
+                    "default": "",
+                    "type": [
+                        "int"
+                    ],
+                    "ui_hints": {
+                        "text_box_size": "xs",
+                        "index": 6
+                    }
+                },
+                "presence_penalty": {
+                    "default": 0,
+                    "type": [
+                        "double"
+                    ],
+                    "ui_hints": {
+                        "index": 7
+                    }
+                },
+                "frequency_penalty": {
+                    "type": [
+                        "int"
+                    ],
+                    "default": 0,
+                    "ui_hints": {
+                        "text_box_size": "xs",
+                        "index": 8
+                    }
+                },
+                "seed": {
+                    "default": "",
+                    "type": [
+                        "int"
+                    ],
+                    "ui_hints": {
+                        "text_box_size": "xs",
+                        "index": 9
+                    }
+                },
+                "detail": {
+                    "enum": [
+                        "low",
+                        "high",
+                        "auto"
+                    ],
+                    "type": [
+                        "string"
+                    ],
+                    "default": "auto",
+                    "ui_hints": {
+                        "index": 10
+                    }
+                }
+            },
+            "package": "promptflow-tools",
+            "package_version": "1.6.1"
+        },
         "promptflow.tools.openai_gpt4v.OpenAI.chat": {
             "name": "OpenAI GPT-4V",
             "description": "Use OpenAI GPT-4V to leverage vision ability.",
@@ -974,157 +1074,57 @@
             "package": "promptflow-tools",
             "package_version": "1.6.1"
         },
-        "promptflow.tools.llm_vision.llm_vision": {
-            "name": "LLM-Vision",
-            "description": {
-                "default": "Use OpenAI-like Large Language Model to leverage vision ability.",
-                "aml": "Use OpenAI-like Large Language Model to leverage vision ability. For more details, refer to this [document](https://aka.ms/promptflow/llm-vision-tool).",
-                "ai_studio": "Use OpenAI-like Large Language Model to leverage vision ability. For more details, refer to this [document](https://aka.ms/aistudio/pf/llm-vision-tool)."
-            },
-            "type": "custom_llm",
-            "module": "promptflow.tools.llm_vision",
-            "function": "llm_vision",
-            "tool_state": "preview",
-            "category": "llm",
-            "icon": {
-                "light": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAx0lEQVR4nJWSwQ2CQBBFX0jAcjgqXUgPJNiIsQQrIVCIFy8GC6ABDcGDX7Mus9n1Xz7zZ+fPsLPwH4bUg0dD2wMPcbR48Uxq4AKU4iSTDwZ1LhWXipN/B3V0J6hjBTvgLHZNonewBXrgDpzEvXSIjN0BE3AACmmF4kl5F6tNzcCoLpW0SvGovFvsb4oZ2AANcAOu4ka6axCcINN3rg654sww+CYsPD0OwjcozFNh/Qcd78tqVbCIW+n+Fky472Bh/Q6SYb1EEy8tDzd+9IsVPAAAAABJRU5ErkJggg==",
-                "dark": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2ElEQVR4nJXSzW3CQBAF4DUSTjk+Al1AD0ikESslpBIEheRALhEpgAYSWV8OGUublf/yLuP3PPNmdndS+gdwXZrYDmh7fGE/W+wXbaYd8IYm4rxJPnZ0boI3wZcdJxs/n+AwV7DFK7aFyfQdYIMLPvES8YJNf5yp4jMeeEYdWh38gXOR35YGHe5xabvQdsHv6PLi8qV6gycc8YH3iMfQu6Lh4ASr+F5Hh3XwVWnQYzUkVlX1nccplAb1SN6Y/sfgmlK64VS8wimldIv/0yj2QLkHizG0iWP4AVAfQ34DVQONAAAAAElFTkSuQmCC"
-            },
-            "default_prompt": "# system:\nAs an AI assistant, your task involves interpreting images and responding to questions about the image.\nRemember to provide accurate answers based on the information present in the image.\n\n# user:\nCan you tell me what the image depicts?\n![image]({{image_input}})\n",
+        "promptflow.tools.serpapi.SerpAPI.search": {
+            "name": "Serp API",
+            "description": "Use Serp API to obtain search results from a specific search engine.",
             "inputs": {
                 "connection": {
                     "type": [
-                        "AzureOpenAIConnection",
-                        "OpenAIConnection"
-                    ],
-                    "ui_hints": {
-                        "index": 0
-                    }
+                        "SerpConnection"
+                    ]
                 },
-                "deployment_name": {
-                    "type": [
-                        "string"
-                    ],
-                    "enabled_by": "connection",
-                    "enabled_by_type": [
-                        "AzureOpenAIConnection"
-                    ],
-                    "capabilities": {
-                        "chat_completion": true,
-                        "include": {
-                            "model_version": [
-                                "vision-preview"
-                            ]
-                        }
-                    },
-                    "allow_manual_entry": true,
-                    "is_multi_select": false,
-                    "ui_hints": {
-                        "text_box_size": "lg",
-                        "index": 1
-                    }
-                },
-                "model": {
-                    "enabled_by": "connection",
-                    "enabled_by_type": [
-                        "OpenAIConnection"
-                    ],
+                "engine": {
+                    "default": "google",
                     "enum": [
-                        "gpt-4-vision-preview"
+                        "google",
+                        "bing"
                     ],
-                    "allow_manual_entry": true,
                     "type": [
                         "string"
-                    ],
-                    "ui_hints": {
-                        "text_box_size": "lg",
-                        "index": 2
-                    }
+                    ]
                 },
-                "temperature": {
-                    "default": 1,
-                    "type": [
-                        "double"
-                    ],
-                    "ui_hints": {
-                        "text_box_size": "xs",
-                        "index": 3
-                    }
-                },
-                "top_p": {
-                    "default": 1,
-                    "type": [
-                        "double"
-                    ],
-                    "ui_hints": {
-                        "text_box_size": "xs",
-                        "index": 4
-                    }
-                },
-                "stop": {
+                "location": {
                     "default": "",
                     "type": [
-                        "list"
-                    ],
-                    "ui_hints": {
-                        "text_box_size": "md",
-                        "index": 5
-                    }
+                        "string"
+                    ]
                 },
-                "max_tokens": {
-                    "default": "",
+                "num": {
+                    "default": "10",
                     "type": [
                         "int"
-                    ],
-                    "ui_hints": {
-                        "text_box_size": "xs",
-                        "index": 6
-                    }
+                    ]
                 },
-                "presence_penalty": {
-                    "default": 0,
+                "query": {
                     "type": [
-                        "double"
-                    ],
-                    "ui_hints": {
-                        "index": 7
-                    }
+                        "string"
+                    ]
                 },
-                "frequency_penalty": {
-                    "type": [
-                        "int"
-                    ],
-                    "default": 0,
-                    "ui_hints": {
-                        "text_box_size": "xs",
-                        "index": 8
-                    }
-                },
-                "seed": {
-                    "default": "",
-                    "type": [
-                        "int"
-                    ],
-                    "ui_hints": {
-                        "text_box_size": "xs",
-                        "index": 9
-                    }
-                },
-                "detail": {
+                "safe": {
+                    "default": "off",
                     "enum": [
-                        "low",
-                        "high",
-                        "auto"
+                        "active",
+                        "off"
                     ],
                     "type": [
                         "string"
-                    ],
-                    "default": "auto",
-                    "ui_hints": {
-                        "index": 10
-                    }
+                    ]
                 }
             },
+            "type": "python",
+            "module": "promptflow.tools.serpapi",
+            "class_name": "SerpAPI",
+            "function": "search",
             "package": "promptflow-tools",
             "package_version": "1.6.1"
         }

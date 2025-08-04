@@ -5,29 +5,23 @@ environment:
 inputs:
   title:
     type: string
-    is_chat_input: true
-    default: 【Aubade】暗影女王奢華植葉刺繡性感吊襪帶 褲襪 蕾絲襪帶 法國進口 女內衣配件(1E-黑)
-    is_chat_history: false
+    default: 【SKIP 四季織】碳化☆筋棒（七珠）加青草膏(☆筋棍)
   tokens_per_message:
     type: int
     default: 2
-    is_chat_history: false
   tokens_per_name:
     type: int
     default: 1
-    is_chat_history: false
   chat_history:
     type: list
     default: []
-    is_chat_history: true
   img_url:
     type: string
-    default: https://og.momoshop.com.tw/goodsimg/0012/495/358/12495358_B.jpg
+    default: https://og.momoshop.com.tw/goodsimg/0010/030/262/10030262_B.jpg
 outputs:
   answer:
     type: string
     reference: ${generate_response.output}
-    is_chat_output: true
 nodes:
 - name: title
   type: llm

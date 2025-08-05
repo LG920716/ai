@@ -69,12 +69,12 @@
     "title_categroy.jinja2": {
       "type": "prompt",
       "inputs": {
-        "context": {
+        "title": {
           "type": [
             "string"
           ]
         },
-        "title": {
+        "context": {
           "type": [
             "string"
           ]

@@ -5,7 +5,7 @@ environment:
 inputs:
   title:
     type: string
-    default: 【SKIP 四季織】碳化☆筋棒（七珠）加青草膏(☆筋棍)
+    default: 【亞柏林】探花跳蛋三合一 遙控版﹝14頻震動刺激+物理縮陰訓練+USB充電﹞玫紅(500548)
   tokens_per_message:
     type: int
     default: 2

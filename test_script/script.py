@@ -24,17 +24,12 @@ type_code_dict = {
 CATEGORY_EQUIVALENCE = [
     {"仿真娃娃", "飛機杯"},
     {"情趣按摩棒", "跳蛋"},
+    {"吸吮器", "跳蛋"},
     {"乳夾", "震動環"},
     {"情趣內衣", "性感睡衣"},
     {"吸吮器", "真空吸引器"},
     {"威而柔", "活力保養", "基本型", "備孕潤滑液"},
 ]
-
-# 建立一個快速查表 dict
-EQUIVALENT_MAP = {}
-for group in CATEGORY_EQUIVALENCE:
-    for item in group:
-        EQUIVALENT_MAP[item] = group
 
 # 定義 18 禁分類清單
 ADULT_CATEGORIES = set(type_code_dict.keys())
@@ -46,7 +41,7 @@ def call_api(title, img_url, retry=1):
                 API_URL,
                 headers={"Content-Type": "application/json"},
                 json={"title": title, "img_url": img_url},
-                timeout=60
+                timeout=600
             )
             if response.status_code == 200:
                 result = response.json().get("answer", {})
@@ -60,9 +55,14 @@ def call_api(title, img_url, retry=1):
                 }
             else:
                 print(f"[ERROR] Status code {response.status_code} for title: {title}")
+                if attempt < retry:
+                    time.sleep(0.5)
+                    continue
         except Exception as e:
             print(f"[EXCEPTION] {e} for title: {title}")
-            time.sleep(0.5)
+            if attempt < retry:
+                time.sleep(0.5)
+                continue
     return {
         "category": "ERROR",
         "category_code": "ERR",
@@ -103,7 +103,7 @@ def main():
     output_df["is_adult_pred"] = output_df["category"].isin(ADULT_CATEGORIES)
     output_df["is_adult_true"] = output_df["L4_CAT_NAME"].isin(ADULT_CATEGORIES)
 
-    # === 改進版 is_correct 判斷邏輯 ===
+    # 改進版 is_correct 判斷邏輯
     def check_is_correct(row):
         if row["category"] == "ERROR":
             return False
@@ -111,15 +111,16 @@ def main():
         pred_cat = row["category"]
         true_cat = row["L4_CAT_NAME"]
 
+        if row["category_code"] == "-" and true_cat not in ADULT_CATEGORIES:
+            return True
+
         pred_is_adult = pred_cat in ADULT_CATEGORIES
         true_is_adult = true_cat in ADULT_CATEGORIES
 
         if pred_is_adult and true_is_adult:
-            # 新邏輯：若在相同等價群組內也算正確
             if pred_cat == true_cat:
                 return True
-            elif (pred_cat in EQUIVALENT_MAP and true_cat in EQUIVALENT_MAP and
-                EQUIVALENT_MAP[pred_cat] == EQUIVALENT_MAP[true_cat]):
+            elif any(pred_cat in group and true_cat in group for group in CATEGORY_EQUIVALENCE):
                 return True
             else:
                 return False
@@ -128,20 +129,19 @@ def main():
         else:
             return False
 
-
     output_df["is_correct"] = output_df.apply(check_is_correct, axis=1)
 
     output_df.to_csv(OUTPUT_PATH, index=False, encoding='utf-8-sig')
     print(f"\n✅ Output saved to: {OUTPUT_PATH}")
 
-    # === 準確率計算（只針對可比對的列）===
+    # 準確率計算（只針對可比對的列）
     valid_rows = output_df[~output_df["category_code"].isin(["UNK", "ERR"])]
     correct = valid_rows["is_correct"].sum()
     total = len(valid_rows)
     accuracy = (correct / total * 100) if total > 0 else 0
     print(f"\n🎯 分類準確率：{accuracy:.2f}%（{correct}/{total}）")
 
-    # === 混淆矩陣（18禁 vs. 分類正確性）===
+    # 混淆矩陣（18禁 vs. 分類正確性）
     print("\n📊 混淆矩陣（rows = is_adult_pred, cols = is_correct）")
     matrix = confusion_matrix(
         output_df["is_adult_true"], 
@@ -154,13 +154,13 @@ def main():
 非18禁商品   {matrix[1,0]:>5}       {matrix[1,1]:>5}
     """)
 
-    # === 18 禁判斷準確率（所有樣本都能算）===
+    # 18 禁判斷準確率（所有樣本都能算）
     output_df["is_adult_match"] = output_df["is_adult_pred"] == output_df["is_adult_true"]
     adult_match_rate = output_df["is_adult_match"].mean() * 100
     adult_match_count = output_df["is_adult_match"].sum()
     print(f"\n🔞 18禁辨識準確率：{adult_match_rate:.2f}%（{adult_match_count}/{len(output_df)}）")
 
-    # === 混淆矩陣（預測的是否是成人 vs 真實是否是成人）===
+    # 混淆矩陣（預測的是否是成人 vs 真實是否是成人）
     print("\n📊 混淆矩陣（rows = 預測是否為成人, cols = 真實是否為成人）")
     matrix = confusion_matrix(
         output_df["is_adult_pred"],

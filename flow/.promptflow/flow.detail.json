@@ -1,58 +1,58 @@
 {
   "flow_runs": [
     {
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
       "status": "Completed",
       "error": null,
       "inputs": {
-        "title": "MAGIC MASSAGER魔法10變頻圓頭按摩棒(插電式-雙色供選)",
+        "title": "【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)",
         "tokens_per_message": 2,
         "tokens_per_name": 1,
         "chat_history": [],
-        "img_url": "https://og.momoshop.com.tw/goodsimg/0012/312/307/12312307_B.jpg"
+        "img_url": "https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg"
       },
       "output": {
         "answer": {
-          "title_result": "Y",
-          "image_result": "-",
-          "category": "情趣按摩棒"
+          "title_result": "N",
+          "image_result": "N",
+          "category": "非成人商品"
         }
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "root_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "root_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
       "source_run_id": null,
       "flow_id": "template_chat_flow",
-      "start_time": "2025-08-04T18:26:56.785140Z",
-      "end_time": "2025-08-04T18:27:00.240430Z",
+      "start_time": "2025-08-05T16:14:32.638657Z",
+      "end_time": "2025-08-05T16:14:35.968404Z",
       "index": 0,
       "api_calls": [
         {
           "name": "flow",
           "node_name": "flow",
           "type": "Flow",
-          "start_time": 1754303216.78514,
-          "end_time": 1754303220.24043,
+          "start_time": 1754381672.638657,
+          "end_time": 1754381675.968404,
           "children": [],
           "system_metrics": {
-            "duration": 3.45529,
+            "duration": 3.329747,
             "prompt_tokens": 0,
             "completion_tokens": 0,
             "total_tokens": 0
           },
           "inputs": {
-            "title": "MAGIC MASSAGER魔法10變頻圓頭按摩棒(插電式-雙色供選)",
+            "title": "【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)",
             "tokens_per_message": 2,
             "tokens_per_name": 1,
             "chat_history": [],
-            "img_url": "https://og.momoshop.com.tw/goodsimg/0012/312/307/12312307_B.jpg"
+            "img_url": "https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg"
           },
           "output": {
             "answer": {
-              "title_result": "Y",
-              "image_result": "-",
-              "category": "情趣按摩棒"
+              "title_result": "N",
+              "image_result": "N",
+              "category": "非成人商品"
             }
           },
           "error": null
@@ -62,16 +62,16 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 3.45529,
+        "duration": 3.329747,
         "prompt_tokens": 0,
         "completion_tokens": 0,
         "total_tokens": 0
       },
       "result": {
         "answer": {
-          "title_result": "Y",
-          "image_result": "-",
-          "category": "情趣按摩棒"
+          "title_result": "N",
+          "image_result": "N",
+          "category": "非成人商品"
         }
       },
       "upload_metrics": false,
@@ -82,25 +82,25 @@
   "node_runs": [
     {
       "node": "title",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_title_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_title_0",
       "status": "Completed",
       "inputs": {
         "temperature": 0.0,
         "model": "gpt-4o",
         "deployment_name": "gpt-4o-2",
         "max_tokens": 4096,
-        "title": "MAGIC MASSAGER魔法10變頻圓頭按摩棒(插電式-雙色供選)",
+        "title": "【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)",
         "_inputs_to_escape": [
           "title"
         ]
       },
-      "output": "Y",
+      "output": "N",
       "metrics": null,
       "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:26:56.786647Z",
-      "end_time": "2025-08-04T18:26:58.156914Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:32.640659Z",
+      "end_time": "2025-08-05T16:14:33.936381Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -110,15 +110,15 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 1.370267
+        "duration": 1.295722
       },
-      "result": "Y",
+      "result": "N",
       "message_format": "basic"
     },
     {
       "node": "context",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_context_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_context_0",
       "status": "Completed",
       "inputs": {},
       "output": [
@@ -229,9 +229,9 @@
       ],
       "metrics": null,
       "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:26:56.790193Z",
-      "end_time": "2025-08-04T18:26:56.790193Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:32.647594Z",
+      "end_time": "2025-08-05T16:14:32.647594Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -352,17 +352,17 @@
       "message_format": "basic"
     },
     {
-      "node": "preprocess_image",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_preprocess_image_0",
+      "node": "title_categroy",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_title_categroy_0",
       "status": "Bypassed",
       "inputs": null,
       "output": null,
       "metrics": null,
       "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:26:58.157930Z",
-      "end_time": "2025-08-04T18:26:58.157930Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:33.937381Z",
+      "end_time": "2025-08-05T16:14:33.937381Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -373,17 +373,45 @@
       "message_format": "basic"
     },
     {
+      "node": "preprocess_image",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_preprocess_image_0",
+      "status": "Completed",
+      "inputs": {
+        "url": "https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg"
+      },
+      "output": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x250AF209A30>, 'has_image': True}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:33.938382Z",
+      "end_time": "2025-08-05T16:14:34.173985Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.235603
+      },
+      "result": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x250AF209A30>, 'has_image': True}",
+      "message_format": "basic"
+    },
+    {
       "node": "no_image",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_no_image_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_no_image_0",
       "status": "Bypassed",
       "inputs": null,
       "output": null,
       "metrics": null,
       "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:26:58.157930Z",
-      "end_time": "2025-08-04T18:26:58.157930Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:34.175980Z",
+      "end_time": "2025-08-05T16:14:34.175980Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -395,33 +423,14 @@
     },
     {
       "node": "image",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_image_0",
-      "status": "Bypassed",
-      "inputs": null,
-      "output": null,
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:26:58.157930Z",
-      "end_time": "2025-08-04T18:26:58.157930Z",
-      "index": 0,
-      "api_calls": [],
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": null,
-      "system_metrics": null,
-      "result": null,
-      "message_format": "basic"
-    },
-    {
-      "node": "title_categroy",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_title_categroy_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_image_0",
       "status": "Completed",
       "inputs": {
         "connection": "momo",
         "api": "chat",
+        "temperature": 0.0,
+        "image_input": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x250AF209A30>, 'has_image': True}",
         "context": [
           {
             "category": "陽具環",
@@ -528,20 +537,15 @@
             "description": "不屬於上列定義，但仍具有成人用途之產品，或無法分類的情趣相關商品。"
           }
         ],
-        "title": "MAGIC MASSAGER魔法10變頻圓頭按摩棒(插電式-雙色供選)",
-        "temperature": 0.0,
         "deployment_name": "gpt-4o-2",
-        "max_tokens": 4096,
-        "_inputs_to_escape": [
-          "title"
-        ]
+        "max_tokens": 4096
       },
-      "output": "情趣按摩棒",
+      "output": "N",
       "metrics": null,
       "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:26:58.157930Z",
-      "end_time": "2025-08-04T18:27:00.235556Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:34.178055Z",
+      "end_time": "2025-08-05T16:14:35.967347Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -551,32 +555,32 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 2.077626
+        "duration": 1.789292
       },
-      "result": "情趣按摩棒",
+      "result": "N",
       "message_format": "basic"
     },
     {
       "node": "generate_response",
-      "flow_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777",
-      "run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_generate_response_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_generate_response_0",
       "status": "Completed",
       "inputs": {
         "no_image": null,
-        "image": null,
-        "title": "Y",
-        "title_category": "情趣按摩棒"
+        "image": "N",
+        "title": "N",
+        "title_category": null
       },
       "output": {
-        "title_result": "Y",
-        "image_result": "-",
-        "category": "情趣按摩棒"
+        "title_result": "N",
+        "image_result": "N",
+        "category": "非成人商品"
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "300a9fcd-4036-4f44-ab2a-6d03639cc777_0",
-      "start_time": "2025-08-04T18:27:00.239925Z",
-      "end_time": "2025-08-04T18:27:00.240430Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:35.968404Z",
+      "end_time": "2025-08-05T16:14:35.968404Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -586,12 +590,12 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000505
+        "duration": 0.0
       },
       "result": {
-        "title_result": "Y",
-        "image_result": "-",
-        "category": "情趣按摩棒"
+        "title_result": "N",
+        "image_result": "N",
+        "category": "非成人商品"
       },
       "message_format": "basic"
     }

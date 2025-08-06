@@ -1,58 +1,58 @@
 {
   "flow_runs": [
     {
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
       "status": "Completed",
       "error": null,
       "inputs": {
-        "title": "【亞柏林】探花跳蛋三合一 遙控版﹝14頻震動刺激+物理縮陰訓練+USB充電﹞玫紅(500548)",
+        "title": "【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)",
         "tokens_per_message": 2,
         "tokens_per_name": 1,
         "chat_history": [],
-        "img_url": "https://og.momoshop.com.tw/goodsimg/0010/030/262/10030262_B.jpg"
+        "img_url": "https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg"
       },
       "output": {
         "answer": {
-          "title_result": "Y",
-          "image_result": "-",
-          "category": "跳蛋"
+          "title_result": "N",
+          "image_result": "N",
+          "category": "非成人商品"
         }
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "root_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "root_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
       "source_run_id": null,
       "flow_id": "template_chat_flow",
-      "start_time": "2025-08-04T16:50:39.379890Z",
-      "end_time": "2025-08-04T16:51:22.780174Z",
+      "start_time": "2025-08-05T16:14:32.638657Z",
+      "end_time": "2025-08-05T16:14:35.968404Z",
       "index": 0,
       "api_calls": [
         {
           "name": "flow",
           "node_name": "flow",
           "type": "Flow",
-          "start_time": 1754297439.37989,
-          "end_time": 1754297482.780174,
+          "start_time": 1754381672.638657,
+          "end_time": 1754381675.968404,
           "children": [],
           "system_metrics": {
-            "duration": 43.400284,
+            "duration": 3.329747,
             "prompt_tokens": 0,
             "completion_tokens": 0,
             "total_tokens": 0
           },
           "inputs": {
-            "title": "【亞柏林】探花跳蛋三合一 遙控版﹝14頻震動刺激+物理縮陰訓練+USB充電﹞玫紅(500548)",
+            "title": "【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)",
             "tokens_per_message": 2,
             "tokens_per_name": 1,
             "chat_history": [],
-            "img_url": "https://og.momoshop.com.tw/goodsimg/0010/030/262/10030262_B.jpg"
+            "img_url": "https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg"
           },
           "output": {
             "answer": {
-              "title_result": "Y",
-              "image_result": "-",
-              "category": "跳蛋"
+              "title_result": "N",
+              "image_result": "N",
+              "category": "非成人商品"
             }
           },
           "error": null
@@ -62,16 +62,16 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 43.400284,
+        "duration": 3.329747,
         "prompt_tokens": 0,
         "completion_tokens": 0,
         "total_tokens": 0
       },
       "result": {
         "answer": {
-          "title_result": "Y",
-          "image_result": "-",
-          "category": "跳蛋"
+          "title_result": "N",
+          "image_result": "N",
+          "category": "非成人商品"
         }
       },
       "upload_metrics": false,
@@ -82,25 +82,25 @@
   "node_runs": [
     {
       "node": "title",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_title_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_title_0",
       "status": "Completed",
       "inputs": {
         "temperature": 0.0,
         "model": "gpt-4o",
         "deployment_name": "gpt-4o-2",
         "max_tokens": 4096,
-        "title": "【亞柏林】探花跳蛋三合一 遙控版﹝14頻震動刺激+物理縮陰訓練+USB充電﹞玫紅(500548)",
+        "title": "【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)",
         "_inputs_to_escape": [
           "title"
         ]
       },
-      "output": "Y",
+      "output": "N",
       "metrics": null,
       "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:50:39.381408Z",
-      "end_time": "2025-08-04T16:50:40.998783Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:32.640659Z",
+      "end_time": "2025-08-05T16:14:33.936381Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -110,15 +110,15 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 1.617375
+        "duration": 1.295722
       },
-      "result": "Y",
+      "result": "N",
       "message_format": "basic"
     },
     {
       "node": "context",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_context_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_context_0",
       "status": "Completed",
       "inputs": {},
       "output": [
@@ -229,9 +229,9 @@
       ],
       "metrics": null,
       "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:50:39.386411Z",
-      "end_time": "2025-08-04T16:50:39.386411Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:32.647594Z",
+      "end_time": "2025-08-05T16:14:32.647594Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -352,17 +352,17 @@
       "message_format": "basic"
     },
     {
-      "node": "preprocess_image",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_preprocess_image_0",
+      "node": "title_categroy",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_title_categroy_0",
       "status": "Bypassed",
       "inputs": null,
       "output": null,
       "metrics": null,
       "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:50:41.002588Z",
-      "end_time": "2025-08-04T16:50:41.002588Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:33.937381Z",
+      "end_time": "2025-08-05T16:14:33.937381Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -373,17 +373,45 @@
       "message_format": "basic"
     },
     {
+      "node": "preprocess_image",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_preprocess_image_0",
+      "status": "Completed",
+      "inputs": {
+        "url": "https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg"
+      },
+      "output": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x250AF209A30>, 'has_image': True}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:33.938382Z",
+      "end_time": "2025-08-05T16:14:34.173985Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.235603
+      },
+      "result": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x250AF209A30>, 'has_image': True}",
+      "message_format": "basic"
+    },
+    {
       "node": "no_image",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_no_image_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_no_image_0",
       "status": "Bypassed",
       "inputs": null,
       "output": null,
       "metrics": null,
       "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:50:41.003581Z",
-      "end_time": "2025-08-04T16:50:41.003581Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:34.175980Z",
+      "end_time": "2025-08-05T16:14:34.175980Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -395,33 +423,14 @@
     },
     {
       "node": "image",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_image_0",
-      "status": "Bypassed",
-      "inputs": null,
-      "output": null,
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:50:41.003581Z",
-      "end_time": "2025-08-04T16:50:41.003581Z",
-      "index": 0,
-      "api_calls": [],
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": null,
-      "system_metrics": null,
-      "result": null,
-      "message_format": "basic"
-    },
-    {
-      "node": "title_categroy",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_title_categroy_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_image_0",
       "status": "Completed",
       "inputs": {
         "connection": "momo",
         "api": "chat",
+        "temperature": 0.0,
+        "image_input": "{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1000x1000 at 0x250AF209A30>, 'has_image': True}",
         "context": [
           {
             "category": "陽具環",
@@ -528,20 +537,15 @@
             "description": "不屬於上列定義，但仍具有成人用途之產品，或無法分類的情趣相關商品。"
           }
         ],
-        "title": "【亞柏林】探花跳蛋三合一 遙控版﹝14頻震動刺激+物理縮陰訓練+USB充電﹞玫紅(500548)",
-        "temperature": 0.0,
         "deployment_name": "gpt-4o-2",
-        "max_tokens": 4096,
-        "_inputs_to_escape": [
-          "title"
-        ]
+        "max_tokens": 4096
       },
-      "output": "跳蛋",
+      "output": "N",
       "metrics": null,
       "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:50:41.004582Z",
-      "end_time": "2025-08-04T16:51:22.775159Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:34.178055Z",
+      "end_time": "2025-08-05T16:14:35.967347Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -551,32 +555,32 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 41.770577
+        "duration": 1.789292
       },
-      "result": "跳蛋",
+      "result": "N",
       "message_format": "basic"
     },
     {
       "node": "generate_response",
-      "flow_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d",
-      "run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_generate_response_0",
+      "flow_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4",
+      "run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_generate_response_0",
       "status": "Completed",
       "inputs": {
         "no_image": null,
-        "image": null,
-        "title": "Y",
-        "title_category": "跳蛋"
+        "image": "N",
+        "title": "N",
+        "title_category": null
       },
       "output": {
-        "title_result": "Y",
-        "image_result": "-",
-        "category": "跳蛋"
+        "title_result": "N",
+        "image_result": "N",
+        "category": "非成人商品"
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "1814a501-d2ac-4dec-b0af-a77e97e4210d_0",
-      "start_time": "2025-08-04T16:51:22.778175Z",
-      "end_time": "2025-08-04T16:51:22.778175Z",
+      "parent_run_id": "dcad1b75-15e8-4982-8226-60ed0bc758a4_0",
+      "start_time": "2025-08-05T16:14:35.968404Z",
+      "end_time": "2025-08-05T16:14:35.968404Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -589,9 +593,9 @@
         "duration": 0.0
       },
       "result": {
-        "title_result": "Y",
-        "image_result": "-",
-        "category": "跳蛋"
+        "title_result": "N",
+        "image_result": "N",
+        "category": "非成人商品"
       },
       "message_format": "basic"
     }

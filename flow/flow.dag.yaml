@@ -5,7 +5,7 @@ environment:
 inputs:
   title:
     type: string
-    default: MAGIC MASSAGER魔法10變頻圓頭按摩棒(插電式-雙色供選)
+    default: 【WILITA 威力特】潤王1300滲透潤滑鬆脫劑300ml(便攜折疊瓶2入)
   tokens_per_message:
     type: int
     default: 2
@@ -17,7 +17,7 @@ inputs:
     default: []
   img_url:
     type: string
-    default: https://og.momoshop.com.tw/goodsimg/0012/312/307/12312307_B.jpg
+    default: https://og.momoshop.com.tw/goodsimg/0011/607/335/11607335_B.jpg
 outputs:
   answer:
     type: string

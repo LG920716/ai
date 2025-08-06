@@ -1,13 +1,9 @@
-azure-identity
-azure-search-documents==11.4.0b6
-openai
 promptflow
 promptflow-tools
+promptflow-core
+promptflow-devkit
 promptflow-azure
-tenacity==8.2.2
-requests
+promptflow-tracing
 pandas
 requests
 scikit-learn
-matplotlib
-seaborn
